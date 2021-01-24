@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Page404 from "../page404/page404.jsx";
-import ApiPageComponent from "../pageComponent";
+import ApiPageComponent from "../_sharedComponents/pageComponent";
 
 class ProjectPage extends ApiPageComponent {
   constructor(props) {

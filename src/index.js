@@ -16,24 +16,20 @@ import TextPage from "./components/textPage/textPage";
 import ContactPage from "./components/contactPage/contactPage";
 import AboutPage from "./components/aboutPage/aboutPage";
 import Page404 from "./components/page404/page404";
-import MainMenu from "./components/mainMenu/mainMenu";
-import Footer from "./components/footer/footer";
+import MainMenu from "./components/_sharedComponents/mainMenu/mainMenu";
+import Footer from "./components/_sharedComponents/footer/footer";
 
 const App = () => {
   return (
     <Router>
+      <MainMenu />
       <Switch>
-        <Route path="/" component={MainMenu}></Route>
-        <Route path="/portfolio:cid" component={MainMenu}></Route>
-      </Switch>
-
-      <Switch>
-        <Route exact path="/" component={HomePage}></Route>
-        <Route exact path="/project/:id" component={ProjectPage}></Route>
-        <Route exact path="/page/:id" component={TextPage}></Route>
-        <Route exact path="/contact/" component={ContactPage}></Route>
-        <Route exact path="/about/" component={AboutPage}></Route>
-        <Route
+        <Route exact path="/" render={() => <HomePage />}></Route>
+        <Route exact path="/project/:id" render={() => <ProjectPage />}></Route>
+        <Route exact path="/page/:id" render={() => <TextPage />}></Route>
+        <Route exact path="/contact/" render={() => <ContactPage />}></Route>
+        <Route exact path="/about/" render={() => <AboutPage />}></Route>
+        {/* <Route
           exact
           path="/portfolio:cid/project/:id"
           component={ProjectPage}
@@ -51,13 +47,10 @@ const App = () => {
         <Route exact path="/portfolio:cid/about/" component={AboutPage}></Route>
 
         <Route exact path="/portfolio:cid" component={HomePage}></Route>
-        <Route component={Page404}></Route>
+        <Route component={Page404}></Route> */}
       </Switch>
 
-      <Switch>
-        <Route path="/" component={Footer}></Route>
-        <Route path="/portfolio:cid" component={Footer}></Route>
-      </Switch>
+      <Footer />
     </Router>
   );
 };
