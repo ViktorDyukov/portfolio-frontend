@@ -13,6 +13,7 @@ class ProjectPage extends ApiPageComponent {
   }
 
   render() {
+    console.log("o1");
     const { error, isLoaded, items } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
