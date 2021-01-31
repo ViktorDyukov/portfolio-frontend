@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import "./index.css";
-import "bootstrap/dist/css/bootstrap.css";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,48 +7,66 @@ import {
   Link,
   useParams,
 } from "react-router-dom";
+import "./global.css";
 
 import HomePage from "./components/homePage/homePage";
-import ProjectPage from "./components/projectPage/projectPage";
-import TextPage from "./components/textPage/textPage";
-import ContactPage from "./components/contactPage/contactPage";
+import StudyPage from "./components/studyPage/studyPage";
+import AllStudiesPage from "./components/allStudiesPage/allStudiesPage";
 import AboutPage from "./components/aboutPage/aboutPage";
-import Page404 from "./components/page404/page404";
-import MainMenu from "./components/_sharedComponents/mainMenu/mainMenu";
-import Footer from "./components/_sharedComponents/footer/footer";
+import MainMenu from "./components/_shared/mainMenu/mainMenu";
+import Footer from "./components/_shared/footer/footer";
 
 const App = () => {
+  const prefPortPath = "portfolio-";
+  const portPath = `/${prefPortPath}:lid([0-9a-fA-f]{3})`;
   return (
     <Router>
-      <MainMenu />
       <Switch>
-        <Route exact path="/" render={() => <HomePage />}></Route>
-        <Route exact path="/project/:id" render={() => <ProjectPage />}></Route>
-        <Route exact path="/page/:id" render={() => <TextPage />}></Route>
-        <Route exact path="/contact/" render={() => <ContactPage />}></Route>
-        <Route exact path="/about/" render={() => <AboutPage />}></Route>
-        {/* <Route
-          exact
-          path="/portfolio:cid/project/:id"
-          component={ProjectPage}
-        ></Route>
         <Route
-          exact
-          path="/portfolio:cid/page/:id"
-          component={TextPage}
+          path={portPath}
+          render={() => <MainMenu prefix={prefPortPath} />}
         ></Route>
-        <Route
-          exact
-          path="/portfolio:cid/contact/"
-          component={ContactPage}
-        ></Route>
-        <Route exact path="/portfolio:cid/about/" component={AboutPage}></Route>
-
-        <Route exact path="/portfolio:cid" component={HomePage}></Route>
-        <Route component={Page404}></Route> */}
       </Switch>
-
-      <Footer />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => {
+            return <div>no portfolio link</div>;
+          }}
+        ></Route>
+        <Route exact path={portPath} render={() => <HomePage />}></Route>
+        <Route
+          exact
+          path={portPath + "/casestudies/"}
+          render={() => <AllStudiesPage />}
+        ></Route>
+        <Route
+          exact
+          path={portPath + "/study/:id"}
+          render={() => {
+            return <StudyPage />;
+          }}
+        ></Route>
+        <Route
+          exact
+          path={portPath + "/coaching/"}
+          render={() => <AboutPage />}
+        ></Route>
+        <Route
+          exact
+          path={portPath + "/about/"}
+          render={() => <AboutPage />}
+        ></Route>
+        <Route
+          exact
+          path={portPath + "/raw/"}
+          render={() => <AboutPage />}
+        ></Route>
+      </Switch>
+      <Switch>
+        <Route path={portPath} render={() => <Footer />}></Route>
+      </Switch>
     </Router>
   );
 };

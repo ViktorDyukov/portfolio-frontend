@@ -4,8 +4,8 @@ import s from "./mainMenu.module.css";
 
 const MainMenuItem = (link, text) => {
   return (
-    <NavLink to={link} activeClassName={s.active}>
-      {text}
+    <NavLink exact to={link} activeClassName={s.active}>
+      <li>{text}</li>
     </NavLink>
   );
 };

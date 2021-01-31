@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 32px;
+  height: 70px;
+  align-items: center;
+}
+
+.root a {
+  color: grey;
+  font-size: 13px;
+  transition: color 0.5s;
+  text-decoration: none;
+}
+
+.root a:hover {
+  color: white;
+}

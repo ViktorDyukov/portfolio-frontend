@@ -1,0 +1,46 @@
+.root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 15%;
+}
+
+.root h1 {
+  font-size: 3.5vw;
+  font-weight: 700;
+  letter-spacing: 0.08vw;
+  line-height: 130%;
+  margin-bottom: 2.5vw;
+}
+
+.root h2 {
+  font-size: 2vw;
+  font-weight: 400;
+  color: #8b8b8b;
+  letter-spacing: 0.05vw;
+  line-height: 180%;
+}
+
+.root h2 strong {
+  font-weight: 400;
+  color: white;
+}
+
+@media screen and (max-width: 550px) {
+  .root {
+    padding: 0 5%;
+  }
+
+  .root h1 {
+    font-size: 10vw;
+    letter-spacing: 0.08vw;
+    line-height: 14vw;
+    margin-bottom: 6vw;
+  }
+
+  .root h2 {
+    font-size: 5vw;
+    letter-spacing: 0.05vw;
+    line-height: 9vw;
+  }
+}

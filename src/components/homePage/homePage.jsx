@@ -1,41 +1,22 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
+import s from "./homePage.module.css";
+import Hero from "./hero";
+import Highlight from "./highlight";
+import Links from "./links";
 
-class HomePage extends Component {
-
-
-  componentDidMount() {
-    let cid = this.props.match.params.cid;
-    if (cid === undefined) {
-      cid = "999";
-    }
-    fetch(`http://127.0.0.1:8000/links/${cid}/`)
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            items: result,
-          });
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error,
-          });
-        }
-      );
-  }
-
-  render() {
-    const { error, isLoaded, items } = this.state;
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
-    } else {
-      return <div>{JSON.stringify(items, null, 2)}</div>;
-    }
-  }
-}
+const HomePage = () => {
+  return (
+    <div>
+      <Hero
+        title="Customer’ trust is key of FinTech product success"
+        description="I’m a designer who has an extensive experience in <strong>FinTech</strong>. With all these years in the domain, I know how to create the <strong>solid relationship</strong> between the business and customers."
+      />
+      <Highlight pid="3" />
+      <Highlight pid="2" />
+      <Highlight pid="10" />
+      <Links />
+    </div>
+  );
+};
 
 export default HomePage;

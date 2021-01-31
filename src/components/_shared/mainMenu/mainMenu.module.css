@@ -1,0 +1,92 @@
+.root {
+  width: auto;
+  background: black;
+}
+
+.toggle {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+.logo {
+  color: white;
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.menu {
+  height: 100vh;
+  list-style-type: none;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+}
+
+.visible {
+  display: flex;
+}
+
+.menu li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.menu a {
+  color: grey;
+  font-size: 22px;
+  transition: color 0.5s;
+  text-decoration: none;
+}
+
+.menu a.active {
+  color: white;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+@media screen and (min-width: 850px) {
+  .root {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    height: auto;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .menu li {
+    margin: 0;
+  }
+
+  .menu a {
+    margin-left: 64px;
+    font-size: 13px;
+  }
+  .logo {
+    margin-top: 0;
+  }
+}
