@@ -35,7 +35,11 @@ const App = () => {
             return <div>no portfolio link</div>;
           }}
         ></Route>
-        <Route exact path={portPath} render={() => <HomePage />}></Route>
+        <Route
+          exact
+          path={portPath}
+          render={() => <HomePage prefix={prefPortPath} />}
+        ></Route>
         <Route
           exact
           path={portPath + "/casestudies/"}
