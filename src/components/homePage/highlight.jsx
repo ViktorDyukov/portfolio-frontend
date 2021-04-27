@@ -1,15 +1,15 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import s from "./highlight.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
+import { server } from "../_shared/api.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Highlight = (props) => {
-  const publ = process.env.PUBLIC_URL;
-  const img_x1 = `${publ}/tmpimg/${props.pid}@1x.png`;
-  const img_x2 = `${publ}/tmpimg/${props.pid}@2x.png`;
+  let prdX1 = server + props.prdX1;
+  let prdX2 = server + props.prdX2;
   const hl = React.createRef();
 
   useEffect(() => {
@@ -40,9 +40,9 @@ const Highlight = (props) => {
 
   return (
     <div className={s.root}>
-      <Link to={`${props.portLink}/study/${props.pid}/`}>
+      <Link to={`${props.portLink}/study/${props.id}/`}>
         <div className={s.hlbox} ref={hl}>
-          <img srcset={`${img_x1} 1x, ${img_x2} 2x,`} src={img_x1} />
+          <img srcSet={`${prdX1} 1x, ${prdX2} 2x,`} src={prdX1} />
         </div>
       </Link>
     </div>

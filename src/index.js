@@ -1,18 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./global.css";
 
 import HomePage from "./components/homePage/homePage";
 import StudyPage from "./components/studyPage/studyPage";
 import AllStudiesPage from "./components/allStudiesPage/allStudiesPage";
 import AboutPage from "./components/aboutPage/aboutPage";
+import TextPage from "./components/textPage/textPage";
 import MainMenu from "./components/_shared/mainMenu/mainMenu";
 import Footer from "./components/_shared/footer/footer";
 
@@ -24,7 +19,13 @@ const App = () => {
       <Switch>
         <Route
           path={portPath}
-          render={() => <MainMenu prefix={prefPortPath} />}
+          render={() => (
+            <MainMenu
+              pth={portPath}
+              key={window.location.pathname}
+              prefix={prefPortPath}
+            />
+          )}
         ></Route>
       </Switch>
       <Switch>
@@ -43,7 +44,7 @@ const App = () => {
         <Route
           exact
           path={portPath + "/casestudies/"}
-          render={() => <AllStudiesPage />}
+          render={() => <AllStudiesPage prefix={prefPortPath} />}
         ></Route>
         <Route
           exact
@@ -54,18 +55,13 @@ const App = () => {
         ></Route>
         <Route
           exact
-          path={portPath + "/coaching/"}
-          render={() => <AboutPage />}
-        ></Route>
-        <Route
-          exact
           path={portPath + "/about/"}
           render={() => <AboutPage />}
         ></Route>
         <Route
           exact
-          path={portPath + "/raw/"}
-          render={() => <AboutPage />}
+          path={portPath + "/page/:purl"}
+          render={() => <TextPage key={window.location.pathname} />}
         ></Route>
       </Switch>
       <Switch>

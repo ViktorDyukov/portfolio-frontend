@@ -1,32 +1,49 @@
-import React, { Component, useEffect } from "react";
+import React from "react";
+import { Helmet } from "react-helmet";
 import s from "./homePage.module.css";
 import Hero from "./hero";
 import Highlight from "./highlight";
 import Links from "./links";
 import { useParams } from "react-router";
+import useApiRequest from "../_shared/api.jsx";
 
 const HomePage = (props) => {
   let portLink = "/" + props.prefix + useParams().lid;
+
+  // start - getting data
+  const { data, error, isLoaded } = useApiRequest(
+    "highlights",
+    useParams().lid
+  );
+
+  if (error !== null) {
+    return <div>Error: {error.message}</div>;
+  }
+  if (!isLoaded || (Array.isArray(data) && !data.length)) {
+    return <div></div>;
+  }
+  // end - getting data
+
+  let hl_list = data.customisation.highlight.map((item) => (
+    <Highlight
+      prdX1={item.preview_deskX1}
+      prdX2={item.preview_deskX2}
+      key={item.id}
+      id={item.id}
+      portLink={portLink}
+    />
+  ));
+
   return (
     <div>
+      <Helmet>
+        <title>Home - Ducov</title>
+      </Helmet>
       <Hero
-        title="Customer’ trust is key of FinTech product success"
-        description="I’m a designer who has an extensive experience in <strong>FinTech</strong>. With all these years in the domain, I know how to create the <strong>solid relationship</strong> between the business and customers."
+        title={data.customisation.intro_header}
+        description={data.customisation.intro_description}
       />
-      <Highlight pid="1" portLink={portLink} />
-      <Highlight pid="2" portLink={portLink} />
-      <Highlight pid="3" portLink={portLink} />
-      <Highlight pid="4" portLink={portLink} />
-      <Highlight pid="5" portLink={portLink} />
-      <Highlight pid="6" portLink={portLink} />
-      <Highlight pid="7" portLink={portLink} />
-      <Highlight pid="8" portLink={portLink} />
-      <Highlight pid="9" portLink={portLink} />
-      <Highlight pid="10" portLink={portLink} />
-      <Highlight pid="11" portLink={portLink} />
-      <Highlight pid="12" portLink={portLink} />
-      <Highlight pid="13" portLink={portLink} />
-      <Highlight pid="14" portLink={portLink} />
+      {hl_list}
       <Links />
     </div>
   );

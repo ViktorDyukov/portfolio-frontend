@@ -13,7 +13,7 @@
   margin-bottom: 2.5vw;
 }
 
-.root h2 {
+.root p {
   font-size: 2vw;
   font-weight: 400;
   color: #8b8b8b;
@@ -21,26 +21,41 @@
   line-height: 180%;
 }
 
-.root h2 strong {
+.root p strong {
   font-weight: 400;
   color: white;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 480px) {
   .root {
+    height: 90vh;
     padding: 0 5%;
   }
 
   .root h1 {
     font-size: 10vw;
     letter-spacing: 0.08vw;
-    line-height: 14vw;
-    margin-bottom: 6vw;
+    line-height: 13vw;
+    margin-bottom: 4vw;
   }
 
-  .root h2 {
+  .root p {
     font-size: 5vw;
     letter-spacing: 0.05vw;
     line-height: 9vw;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .root h1 {
+    font-size: 60px;
+    letter-spacing: 1.4px;
+    margin-bottom: 44px;
+  }
+
+  .root p {
+    font-size: 32px;
+    letter-spacing: 0.9px;
+    line-height: 56px;
   }
 }

@@ -1,0 +1,76 @@
+.root {
+  padding-top: 160px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 32px 10%;
+  justify-content: space-between;
+  max-width: 1800px;
+  flex-wrap: wrap;
+}
+
+.mainphoto {
+  width: 100%;
+}
+
+.header .item_photo {
+  flex-basis: 40%;
+}
+
+.header .item_text {
+  flex-basis: 55%;
+  margin-top: -20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.header .buttons > div {
+  flex-basis: 50%;
+  padding: 0.75vw 0;
+}
+
+@media screen and (min-width: 480px) {
+  .header .item_text h1 {
+    font-size: 3.5vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header .item_text p {
+    font-size: 1.3vw;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 32px 16px;
+  }
+  .mainphoto {
+    display: none;
+  }
+  .header {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .header .item_text h1 {
+    font-size: 56px;
+  }
+  .header .item_text p {
+    font-size: 20px;
+  }
+}

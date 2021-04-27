@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React from "react";
 import s from "./links.module.css";
 
 const Links = () => {

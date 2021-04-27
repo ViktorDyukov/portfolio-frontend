@@ -1,0 +1,37 @@
+.root {
+  margin-right: 40px;
+}
+
+.root * {
+  color: #8b8b8b;
+  transition: color 0.5s;
+}
+
+.root *:hover {
+  color: #cecece;
+}
+
+.root button {
+  border: none;
+  background: none;
+  font-size: 27px;
+  letter-spacing: 1px;
+  line-height: 46px;
+  cursor: pointer;
+}
+
+.root.active * {
+  color: white;
+  cursor: default;
+}
+
+.root.active .dot {
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 50%;
+  display: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}

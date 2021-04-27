@@ -1,0 +1,18 @@
+.root {
+  padding-top: 160px;
+  padding-bottom: 120px;
+}
+
+.title {
+  padding-bottom: 220px;
+}
+
+.filterlinks {
+  display: flex;
+}
+
+@media screen and (max-width: 480px) {
+  .filterlinks {
+    display: none;
+  }
+}

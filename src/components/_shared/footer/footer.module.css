@@ -16,3 +16,7 @@
 .root a:hover {
   color: white;
 }
+
+.smbuttons a {
+  padding-left: 16px;
+}

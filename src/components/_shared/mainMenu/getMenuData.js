@@ -2,10 +2,10 @@ const mainMenuData = () => {
   let menuItems = [
     { link: "/", text: "Highlights" },
     { link: "/casestudies", text: "Case Studies" },
-    { link: "/coaching", text: "Coaching" },
-    { link: "/ar", text: "Argumented Reality" },
+    { link: "/page/augmented-reality", text: "Augmented reality" },
+    { link: "/page/mentoring", text: "Mentoring" },
     { link: "/about", text: "About me" },
-    { link: "/raw", text: "Raw" },
+    // { link: "/raw", text: "Raw" },
   ];
   return menuItems;
 };
