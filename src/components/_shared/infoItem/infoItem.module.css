@@ -20,7 +20,7 @@
   line-height: 38px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 992px) {
   .item {
     flex-direction: column;
     padding: 16px 0;

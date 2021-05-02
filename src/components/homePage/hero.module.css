@@ -26,6 +26,13 @@
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .root {
+    height: 60vh;
+    padding: 0 5%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .root {
     height: 90vh;

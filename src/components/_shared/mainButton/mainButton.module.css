@@ -1,0 +1,18 @@
+.root {
+  display: inline-block;
+  background-color: transparent;
+  height: 44px;
+
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.42px;
+
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+
+  transition: all 0.1s;
+}
+
+.root:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

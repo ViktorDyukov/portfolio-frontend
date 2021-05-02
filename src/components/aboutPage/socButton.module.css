@@ -19,12 +19,50 @@
   padding-right: 12px;
 }
 
+@media screen and (max-width: 1200px) {
+  .root a {
+    font-size: 1.3vw;
+  }
+  .linkcontainer {
+    padding: 4px;
+    display: flex;
+    width: auto;
+  }
+  .icon {
+    width: 24px;
+    height: 16px;
+    padding-right: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .root a {
+    font-size: 14px;
+  }
+  .linkcontainer {
+    padding: 4px;
+    display: flex;
+    width: auto;
+  }
+  .icon {
+    width: 24px;
+    height: 16px;
+    padding-right: 8px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .root a {
     font-size: 18px;
   }
   .linkcontainer {
     padding: 12px 0;
+  }
+
+  .icon {
+    width: 32px;
+    height: 24px;
+    padding-right: 8px;
   }
 }
 

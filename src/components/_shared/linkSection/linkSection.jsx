@@ -1,7 +1,8 @@
 import React from "react";
-import s from "./links.module.css";
+import s from "./linkSection.module.css";
+import MainButton from "../mainButton/mainButton";
 
-const Links = () => {
+const LinkSection = () => {
   return (
     <div className={s.root}>
       <div className={s.item}>
@@ -11,7 +12,7 @@ const Links = () => {
           Vitya is a designer and art director who loves to craft a good story.
           I do FinTech design
         </p>
-        <button>See all stuff</button>
+        <MainButton text="Show more" width="180px" />
       </div>
       <div className={s.item}>
         <h3>Who is Viktor</h3>
@@ -20,7 +21,7 @@ const Links = () => {
           Vitya is a designer and art director who loves to craft a good story.
           I do FinTech design
         </p>
-        <button>See all stuff</button>
+        <MainButton text="Show more" width="180px" />
       </div>
       <div className={s.item}>
         <h3>QA Section</h3>
@@ -29,10 +30,10 @@ const Links = () => {
           Vitya is a designer and art director who loves to craft a good story.
           I do FinTech design
         </p>
-        <button>See all stuff</button>
+        <MainButton text="Show more" width="180px" />
       </div>
     </div>
   );
 };
 
-export default Links;
+export default LinkSection;

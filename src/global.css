@@ -12,10 +12,11 @@ body {
   color: white;
   width: 100%;
   text-align: center;
+  border: none;
 }
 
 #root {
-  width: 1700px;
+  max-width: 1920px;
   text-align: left;
   margin: 0px auto;
 }
@@ -54,6 +55,20 @@ p a {
   color: white;
 }
 
+@media screen and (max-width: 1300px) {
+  .all_pages_container {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .all_pages_container {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 36px;
@@ -83,4 +98,3 @@ p a {
     padding-right: 16px;
   }
 }
-

@@ -4,14 +4,13 @@
 .header {
   width: 100%;
   height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header .title {
   margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .header h1 {

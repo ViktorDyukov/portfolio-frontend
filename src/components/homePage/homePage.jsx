@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import s from "./homePage.module.css";
 import Hero from "./hero";
 import Highlight from "./highlight";
-import Links from "./links";
+import LinkSection from "../_shared/linkSection/linkSection";
 import { useParams } from "react-router";
 import useApiRequest from "../_shared/api.jsx";
 
@@ -44,7 +44,7 @@ const HomePage = (props) => {
         description={data.customisation.intro_description}
       />
       {hl_list}
-      <Links />
+      <LinkSection />
     </div>
   );
 };

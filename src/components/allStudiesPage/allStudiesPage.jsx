@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { useParams } from "react-router";
 import useApiRequest from "../_shared/api.jsx";
 import Highlight from "../homePage/highlight";
-import Links from "../homePage/links";
+import LinkSection from "../_shared/linkSection/linkSection";
 import s from "./allStudiesPage.module.css";
 import FilterLink from "./filterLink";
 
@@ -101,7 +101,7 @@ const AllStudiesPage = (props) => {
         <div className={s.filterlinks}>{hl_filter}</div>
       </div>
       {hl_list}
-      <Links />
+      <LinkSection />
     </div>
   );
 };

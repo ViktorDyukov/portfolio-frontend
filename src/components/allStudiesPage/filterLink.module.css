@@ -35,3 +35,15 @@
   margin-right: auto;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 1480px) {
+  .root {
+    margin-right: 24px;
+  }
+  .root button {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+}
