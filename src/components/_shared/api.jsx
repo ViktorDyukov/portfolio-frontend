@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-let server = `http://${window.location.hostname}/api`;
+let server = `https://${window.location.hostname}/api`;
 export { server };
 
 const useApiRequest = (key, id = "") => {
