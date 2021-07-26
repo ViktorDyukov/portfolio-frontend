@@ -18,7 +18,7 @@ jobs:
             mkdir temp_fe 
             cd temp_fe 
             git clone git@github.com:ViktorDyukov/portfolio-frontend.git 
-            rm /home/react/portfolio-frontend-build/*.*
-            cp -r portfolio-frontend/build/ /home/react/portfolio-frontend-build/
+            rm -r /home/react/portfolio-frontend-build/*.*
+            cp -r portfolio-frontend/build/. /home/react/portfolio-frontend-build/
             cd ..
             rm -r temp_fe
