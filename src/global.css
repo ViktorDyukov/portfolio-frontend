@@ -19,6 +19,7 @@ body {
   max-width: 1920px;
   text-align: left;
   margin: 0px auto;
+  min-height: 100vh;
 }
 
 h1 {
