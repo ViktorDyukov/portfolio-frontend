@@ -8,7 +8,6 @@ import s from "./allStudiesPage.module.css";
 import FilterLink from "./filterLink";
 
 const AllStudiesPage = (props) => {
-  let portLink = "/" + props.prefix + useParams().lid;
   let [origData, setOrigData] = useState([]);
   let [activeFilter, setActiveFilter] = useState([-1]);
 
@@ -45,7 +44,6 @@ const AllStudiesPage = (props) => {
       prdX2={item.preview_deskX2}
       key={item.id}
       id={item.id}
-      portLink={portLink}
     />
   ));
 

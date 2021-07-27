@@ -17,7 +17,7 @@ const Highlight = React.forwardRef((props, ref) => {
           <Timeline
             target={
               <div className={s.root}>
-                <Link to={`${props.portLink}/study/${props.id}/`}>
+                <Link to={`/study/${props.id}/`}>
                   <div className={s.hlbox}>
                     <img srcSet={`${prdX1} 1x, ${prdX2} 2x,`} src={prdX1} />
                   </div>
@@ -48,7 +48,7 @@ const Highlight = React.forwardRef((props, ref) => {
             <Timeline
               target={
                 <Link
-                  to={`${props.portLink}/study/${props.id}/`}
+                  to={`${window.location.host}/study/${props.id}/`}
                   className={s.m_root}
                 >
                   <div className={s.upper}></div>

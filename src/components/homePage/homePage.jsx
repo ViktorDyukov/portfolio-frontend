@@ -8,12 +8,12 @@ import { useParams } from "react-router";
 import useApiRequest from "../_shared/api.jsx";
 
 const HomePage = (props) => {
-  let portLink = "/" + props.prefix + useParams().lid;
+  //let portLink = "/" + props.prefix + useParams().lid;
 
   // start - getting data
   const { data, error, isLoaded } = useApiRequest(
     "highlights",
-    useParams().lid
+    props.subDomain
   );
 
   if (error !== null) {
@@ -30,7 +30,6 @@ const HomePage = (props) => {
       prdX2={item.preview_deskX2}
       key={item.id}
       id={item.id}
-      portLink={portLink}
     />
   ));
 

@@ -19,60 +19,49 @@ const breakpoints = {
 };
 
 const App = () => {
-  const prefPortPath = "portfolio-";
-  const portPath = `/${prefPortPath}:lid([0-9a-fA-f]{3})`;
+  // const prefPortPath = "portfolio-";
+  // const portPath = `/${prefPortPath}:lid([0-9a-fA-f]{3})`;
+
+  const domains = window.location.host.split(".");
+  var subDomain = "";
+  if (domains.length >= 3) subDomain = domains[0];
+  else subDomain = "public";
+  console.log(process.env.NODE_ENV);
   return (
     <Router>
       <Switch>
         <Route
-          path={portPath}
-          render={() => (
-            <MainMenu
-              pth={portPath}
-              key={window.location.pathname}
-              prefix={prefPortPath}
-            />
-          )}
+          path="/"
+          render={() => <MainMenu key={window.location.pathname} />}
         ></Route>
       </Switch>
       <Switch>
         <Route
           exact
-          path="/"
-          render={() => {
-            return <div>no portfolio link</div>;
-          }}
+          path={"/"}
+          render={() => <HomePage subDomain={subDomain} />}
         ></Route>
         <Route
           exact
-          path={portPath}
-          render={() => <HomePage prefix={prefPortPath} />}
+          path={"/casestudies/"}
+          render={() => <AllStudiesPage />}
         ></Route>
         <Route
           exact
-          path={portPath + "/casestudies/"}
-          render={() => <AllStudiesPage prefix={prefPortPath} />}
-        ></Route>
-        <Route
-          exact
-          path={portPath + "/study/:id"}
+          path={"/study/:id"}
           render={() => {
             return <StudyPage />;
           }}
         ></Route>
+        <Route exact path={"/about/"} render={() => <AboutPage />}></Route>
         <Route
           exact
-          path={portPath + "/about/"}
-          render={() => <AboutPage />}
-        ></Route>
-        <Route
-          exact
-          path={portPath + "/page/:purl"}
+          path={"/page/:purl"}
           render={() => <TextPage key={window.location.pathname} />}
         ></Route>
       </Switch>
       <Switch>
-        <Route path={portPath} render={() => <Footer />}></Route>
+        <Route path={"/"} render={() => <Footer />}></Route>
       </Switch>
     </Router>
   );
