@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-let server = `http://victorlocal.com:8000/api`;
+const server =
+  process.env.NODE_ENV === "production"
+    ? process.env.REACT_APP_PROD_API_URL
+    : process.env.REACT_APP_DEV_API_URL;
+
 export { server };
 
 const useApiRequest = (key, id = "") => {

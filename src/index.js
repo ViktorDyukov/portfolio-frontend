@@ -26,7 +26,6 @@ const App = () => {
   var subDomain = "";
   if (domains.length >= 3) subDomain = domains[0];
   else subDomain = "public";
-  console.log(process.env.NODE_ENV);
   return (
     <Router>
       <Switch>
