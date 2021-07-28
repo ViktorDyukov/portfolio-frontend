@@ -4,9 +4,9 @@
   padding: 64px 32px;
   height: 70px;
   align-items: center;
-  position: absolute;
   width: 100%;
   bottom: 0;
+  flex-shrink: 0;
 }
 
 .root a {

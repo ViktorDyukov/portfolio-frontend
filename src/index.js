@@ -28,37 +28,40 @@ const App = () => {
   else subDomain = "public";
   return (
     <Router>
-      <Switch>
-        <Route
-          path="/"
-          render={() => <MainMenu key={window.location.pathname} />}
-        ></Route>
-      </Switch>
-      <Switch>
-        <Route
-          exact
-          path={"/"}
-          render={() => <HomePage subDomain={subDomain} />}
-        ></Route>
-        <Route
-          exact
-          path={"/casestudies/"}
-          render={() => <AllStudiesPage />}
-        ></Route>
-        <Route
-          exact
-          path={"/study/:id"}
-          render={() => {
-            return <StudyPage />;
-          }}
-        ></Route>
-        <Route exact path={"/about/"} render={() => <AboutPage />}></Route>
-        <Route
-          exact
-          path={"/page/:purl"}
-          render={() => <TextPage key={window.location.pathname} />}
-        ></Route>
-      </Switch>
+      <div id="body_content">
+        <Switch>
+          <Route
+            path="/"
+            render={() => <MainMenu key={window.location.pathname} />}
+          ></Route>
+        </Switch>
+        <Switch>
+          <Route
+            exact
+            path={"/"}
+            render={() => <HomePage subDomain={subDomain} />}
+          ></Route>
+          <Route
+            exact
+            path={"/casestudies/"}
+            render={() => <AllStudiesPage />}
+          ></Route>
+          <Route
+            exact
+            path={"/study/:id"}
+            render={() => {
+              return <StudyPage />;
+            }}
+          ></Route>
+          <Route exact path={"/about/"} render={() => <AboutPage />}></Route>
+          <Route
+            exact
+            path={"/page/:purl"}
+            render={() => <TextPage key={window.location.pathname} />}
+          ></Route>
+        </Switch>
+      </div>
+
       <Switch>
         <Route path={"/"} render={() => <Footer />}></Route>
       </Switch>
