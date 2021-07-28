@@ -8,16 +8,16 @@
 
 .title {
   width: 20%;
-  font-size: 18px;
+  font-size: 16px;
   color: #8b8b8b;
-  line-height: 38px;
+  line-height: 34px;
 }
 
 .body {
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   color: #ffffff;
-  line-height: 38px;
+  line-height: 34px;
 }
 
 @media screen and (max-width: 992px) {
