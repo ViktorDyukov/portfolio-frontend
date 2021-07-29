@@ -19,28 +19,25 @@ const StudyPage = () => {
   }
   // end - getting data
 
-  // content
-  let contentRes = (
-    <div className={`all_pages_container ${s.content}`}>
-      <InfoItem title={data.c1_title} body={data.c1_body} />
-      <InfoItem title={data.c2_title} body={data.c2_body} />
-      <InfoItem title={data.c3_title} body={data.c3_body} />
-      <InfoItem title={data.c4_title} body={data.c4_body} />
-      <InfoItem title="Designs" gallery="true" body={data.caseImage} />
-    </div>
-  );
   return (
     <div>
       <Helmet>
         <title>{`${data.title} - Ducov`}</title>
       </Helmet>
+
       <div className={s.root}></div>
       <div className={s.header} style={{ backgroundColor: data.bg_color }}>
         <div className={s.title}>
           <h1>{data.title}</h1>
         </div>
       </div>
-      {contentRes}
+
+      <div className={`all_pages_container ${s.content}`}>
+        {data.caseInfoSection.map((item) => (
+          <InfoItem title={item.title} body={item.body} />
+        ))}
+        <InfoItem title="Designs" gallery="true" body={data.caseImage} />
+      </div>
     </div>
   );
 };

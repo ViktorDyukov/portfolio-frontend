@@ -20,17 +20,16 @@ const AboutPage = () => {
         </div>
         <div class={s.item_text}>
           <div>
-            <h1>All about V/DUCOV also known as a Viktor</h1>
+            <h1>Here's my story. Designer, father, mother</h1>
           </div>
           <div>
             <p>
-              I joined the company right when Boosted was prepping to launch its
-              2nd Gen Board. We quickly teamed up with a design agency (Ueno) to
-              create a landing page for collecting pre-orders. We listed out
-              product specs, slapped on a handful of sexy product renders and
-              pushed go. We listed out product specs, slapped on a handful of
-              sexy product renders and pushed go. We listed out product specs,
-              slapped on a handful of sexy product renders and pushed go.
+              Hey, I'm Victor, a product designer based in Helsinki, Finland.
+              Coming from a product management background, I firmly grasp the
+              importance of applying human-centered design methods and processes
+              to make informed decisions. I’m passionate about participating in
+              all phases of creating a product—from discovery to delivery. I'm
+              always trying to grow and learn something new.
             </p>
           </div>
           <div class={s.buttons}>
@@ -60,34 +59,16 @@ const AboutPage = () => {
 
       <div className={`all_pages_container ${s.content}`}>
         <InfoItem
-          title="weqwqwe"
-          body="weqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqwe"
+          title="Experience"
+          body="During the past 8+ years of working as a designer in diverse industries including FinTech, MedTech, SaaS, and Internal communication, I created UX for customers and users of companies from small startups to S&P 500 corporations. "
         />
         <InfoItem
-          title="weqwqwe"
-          body="weqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqwe"
+          title="Values"
+          body="I believe that the work I do should have a positive impact on people. There are more and more advanced technologies in the world, and my role as a designer is to create the bridge between people and this new world of innovation. "
         />
         <InfoItem
-          title="weqwqwe"
-          body="weqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqwe"
-        />
-        <InfoItem
-          title="weqwqwe"
-          body="weqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqwe"
-        />
-        <InfoItem
-          title="weqwqwe"
-          body="weqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe weqwqweweqwqwe
-            weqwqweweqwqwe weqwqwe"
+          title="Hobbies"
+          body="I like coding. This website is the product of this hobby — I created it with Python (Django Rest API) and React. Now I’m working on an AR project, a prototype of the app for Vuzix Smartglasses so I’m learning to create apps for Android. And yes, I have a dream to find more hobbies that aren’t behind the keyboard. "
         />
       </div>
 
