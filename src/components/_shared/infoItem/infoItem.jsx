@@ -20,7 +20,10 @@ const InfoItem = (props) => {
     return (
       <div className={s.item}>
         <div className={s.title}>{props.title}</div>
-        <div className={s.body}>{props.body}</div>
+        <div
+          className={s.body}
+          dangerouslySetInnerHTML={{ __html: props.body }}
+        />
       </div>
     );
   }
