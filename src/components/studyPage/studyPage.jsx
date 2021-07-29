@@ -16,7 +16,7 @@ const StudyPage = () => {
     return <div>Error: {error.message}</div>;
   }
   if (!isLoaded || (Array.isArray(data) && !data.length)) {
-    return <div>loading</div>;
+    return <div></div>;
   }
   // end - getting data
 
