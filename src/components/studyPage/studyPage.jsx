@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router";
-import useApiRequest from "../_shared/api.jsx";
+import useApiRequest from "../_shared/utilities/api.jsx";
 import s from "./studyPage.module.css";
+import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import InfoItem from "../_shared/infoItem/infoItem";
 
 const StudyPage = () => {
@@ -26,14 +27,43 @@ const StudyPage = () => {
       </Helmet>
 
       <div className={s.root}></div>
-      <div className={s.header} style={{ backgroundColor: data.bg_color }}>
-        <div className={s.title}>
-          <h1>{data.title}</h1>
-        </div>
+      <div className={`all_pages_container ${s.content}`}>
+        <h1>{data.title}</h1>
+        {data.caseInfoSection.slice(0, 2).map((item) => (
+          <div>
+            <h2>{item.title}</h2>
+            <p>{item.body}</p>
+          </div>
+        ))}
       </div>
 
+      <ScrollTrigger
+        start="center center"
+        end="bottom center"
+        pin={true}
+        pinSpacing="margin"
+        scrub={0.5}
+      >
+        <Timeline
+          target={
+            <div className={s.imgSeparator}>
+              <img src="https://dummyimage.com/1200x600/00FF00/00FF00.png" />
+            </div>
+          }
+        >
+          <Tween
+            to={{
+              opacity: "1",
+              scale: "0.75",
+            }}
+            duration={0.7}
+            ease="Power2.easeIn"
+          ></Tween>
+        </Timeline>
+      </ScrollTrigger>
+
       <div className={`all_pages_container ${s.content}`}>
-        {data.caseInfoSection.map((item) => (
+        {data.caseInfoSection.slice(2).map((item) => (
           <InfoItem title={item.title} body={item.body} />
         ))}
         <InfoItem title="Designs" gallery="true" body={data.caseImage} />

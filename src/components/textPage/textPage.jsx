@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import s from "./textPage.module.css";
 import { useParams } from "react-router";
-import useApiRequest from "../_shared/api.jsx";
+import useApiRequest from "../_shared/utilities/api.jsx";
 
 const TextPage = (props) => {
   let purl = useParams().purl;

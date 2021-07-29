@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/dist/default-skin/default-skin.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
-import { server } from "../api.jsx";
+import { server } from "../utilities/api.jsx";
 import s from "./galleryView.module.css";
 
 const GalleryView = (props) => {

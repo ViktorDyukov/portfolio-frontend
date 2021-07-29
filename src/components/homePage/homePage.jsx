@@ -5,16 +5,12 @@ import Hero from "./hero";
 import Highlight from "./highlight";
 import LinkSection from "../_shared/linkSection/linkSection";
 import { useParams } from "react-router";
-import useApiRequest from "../_shared/api.jsx";
+import useApiRequest from "../_shared/utilities/api.jsx";
+import getSubdomain from "../_shared/utilities/getSubdomain";
 
-const HomePage = (props) => {
-  //let portLink = "/" + props.prefix + useParams().lid;
-
+const HomePage = () => {
   // start - getting data
-  const { data, error, isLoaded } = useApiRequest(
-    "highlights",
-    props.subDomain
-  );
+  const { data, error, isLoaded } = useApiRequest("highlights", getSubdomain());
 
   if (error !== null) {
     return <div>Error: {error.message}</div>;

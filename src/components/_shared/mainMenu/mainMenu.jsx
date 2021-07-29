@@ -1,8 +1,8 @@
 import React from "react";
 import MainMenuItem from "./mainMenuItem";
 import { useParams } from "react-router";
-import getMenuData from "./getMenuData.js";
-import getLogoName from "./getLogoName";
+import getMenuData from "../utilities/getMenuData.js";
+import getLogoName from "../utilities/getLogoName";
 import s from "./mainMenu.module.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
