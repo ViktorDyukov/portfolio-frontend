@@ -32,32 +32,31 @@ const StudyPage = () => {
         {data.caseInfoSection.slice(0, 2).map((item) => (
           <div>
             <h2>{item.title}</h2>
-            <p>{item.body}</p>
+            <p dangerouslySetInnerHTML={{ __html: item.body }}></p>
           </div>
         ))}
       </div>
 
       <ScrollTrigger
-        start="center center"
+        start="top bottom"
         end="bottom center"
-        pin={true}
-        pinSpacing="margin"
+        pin={false}
         scrub={0.5}
       >
         <Timeline
           target={
-            <div className={s.imgSeparator}>
-              <img src="https://dummyimage.com/1200x600/00FF00/00FF00.png" />
+            <div id="imgSeparator" className={s.imgSeparator}>
+              <img src="https://dummyimage.com/1200x480/2222AA/AAAAAA.png" />
             </div>
           }
         >
           <Tween
-            to={{
-              opacity: "1",
-              scale: "0.75",
+            from={{
+              scale: "0.9",
+              opacity: "0.1",
             }}
-            duration={0.7}
-            ease="Power2.easeIn"
+            duration={1}
+            ease="Power3.easeOut"
           ></Tween>
         </Timeline>
       </ScrollTrigger>
