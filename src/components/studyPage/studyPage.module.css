@@ -1,27 +1,17 @@
 .root {
 }
 
-.imgSeparator {
-  width: 100vw;
-}
-
 .header {
-  width: 100%;
-  height: 650px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header .title {
-  margin: 0;
+  margin: 160px 0;
 }
 
 .header h1 {
-  color: #000000;
-  font-weight: 900;
-  width: 60%;
-  padding-left: 14%;
+  margin-bottom: 24px;
+}
+
+.header p {
+  font-size: 24px;
+  line-height: 48px;
 }
 
 .content {
@@ -40,4 +30,18 @@
   height: 100%;
   position: absolute;
   left: 0;
+}
+
+.temp {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.temp > div {
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 14px;
+  margin-right: 16px;
 }

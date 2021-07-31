@@ -27,14 +27,22 @@ const StudyPage = () => {
       </Helmet>
 
       <div className={s.root}></div>
-      <div className={`all_pages_container ${s.content}`}>
+      <div className={`all_pages_container ${s.header}`}>
+        <div className={s.temp}>
+          <div>Mobile</div>
+          <div>FinTech</div>
+          <div>Design system</div>
+        </div>
         <h1>{data.title}</h1>
-        {data.caseInfoSection.slice(0, 2).map((item) => (
-          <div>
-            <h2>{item.title}</h2>
-            <p dangerouslySetInnerHTML={{ __html: item.body }}></p>
-          </div>
-        ))}
+        <p>
+          I joined the company right when Boosted was prepping to launch its 2nd
+          Gen Board. We quickly teamed up with a design agency (Ueno) to create
+          a landing page for collecting pre-orders. We listed out product specs,
+          slapped on a handful of sexy product renders and pushed go. We listed
+          out product specs, slapped on a handful of sexy product renders and
+          pushed go. We listed out product specs, slapped on a handful of sexy
+          product renders and pushed go.
+        </p>
       </div>
 
       <ScrollTrigger
@@ -62,7 +70,7 @@ const StudyPage = () => {
       </ScrollTrigger>
 
       <div className={`all_pages_container ${s.content}`}>
-        {data.caseInfoSection.slice(2).map((item) => (
+        {data.caseInfoSection.map((item) => (
           <InfoItem title={item.title} body={item.body} />
         ))}
         <InfoItem title="Designs" gallery="true" body={data.caseImage} />
