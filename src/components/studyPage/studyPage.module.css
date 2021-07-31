@@ -21,13 +21,12 @@
 
 .imgSeparator {
   width: 100%;
-  padding-bottom: 40%;
-  height: 0;
+  height: 480px;
 }
 
 .imgSeparator img {
-  width: 100%;
   height: 100%;
-  position: absolute;
-  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

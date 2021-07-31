@@ -41,7 +41,11 @@ const StudyPage = () => {
       >
         <Timeline
           target={
-            <div id="imgSeparator" className={s.imgSeparator}>
+            <div
+              id="imgSeparator"
+              className={s.imgSeparator}
+              style={{ backgroundColor: data.bg_color }}
+            >
               <img
                 srcSet={`${APIUrl}${data.separatorImg_deskX1} 1x, ${APIUrl}${data.separatorImg_deskX2} 2x,`}
                 src={`${APIUrl}${data.separatorImg_deskX1}`}
