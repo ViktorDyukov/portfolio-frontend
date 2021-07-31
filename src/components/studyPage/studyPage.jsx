@@ -44,13 +44,13 @@ const StudyPage = () => {
             <div
               id="imgSeparator"
               className={s.imgSeparator}
-              style={{ backgroundColor: data.bg_color }}
+              // style={{ backgroundColor: data.bg_color }}
             >
               <img
                 srcSet={`${APIUrl}${data.separatorImg_deskX1} 1x, ${APIUrl}${data.separatorImg_deskX2} 2x,`}
                 src={`${APIUrl}${data.separatorImg_deskX1}`}
               />
-              {/* <img src="https://dummyimage.com/1200x480/2222AA/AAAAAA.png" /> */}
+              {/* <img src="https://dummyimage.com/1200x2000/ffffff/666666" /> */}
             </div>
           }
         >
