@@ -2,14 +2,11 @@ import React, { useEffect } from "react";
 import s from "./highlight.module.css";
 import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import { Link, NavLink } from "react-router-dom";
-import { server } from "../_shared/utilities/api.jsx";
+import { APIUrl } from "../_shared/utilities/api.jsx";
 import { HideAt, ShowAt } from "react-with-breakpoints";
 import MainButton from "../_shared/mainButton/mainButton";
 
 const Highlight = React.forwardRef((props, ref) => {
-  let prdX1 = server + props.prdX1;
-  let prdX2 = server + props.prdX2;
-
   return (
     <div>
       <HideAt breakpoint="mediumAndBelow">
@@ -19,7 +16,10 @@ const Highlight = React.forwardRef((props, ref) => {
               <div className={s.root}>
                 <NavLink key={props.id} exact to={`/study/${props.id}/`}>
                   <div className={s.hlbox}>
-                    <img srcSet={`${prdX1} 1x, ${prdX2} 2x,`} src={prdX1} />
+                    <img
+                      srcSet={`${APIUrl}${props.prdX1} 1x, ${APIUrl}${props.prdX2} 2x,`}
+                      src={`${APIUrl}${props.prdX1}`}
+                    />
                   </div>
                 </NavLink>
               </div>

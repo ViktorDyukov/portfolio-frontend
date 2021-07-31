@@ -2,20 +2,20 @@ import React, { useEffect, useState, useRef } from "react";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/dist/default-skin/default-skin.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
-import { server } from "../utilities/api.jsx";
+import { APIUrl } from "../utilities/api.jsx";
 import s from "./galleryView.module.css";
 
 const GalleryView = (props) => {
   let galleryItems = props.images.map((item) => (
     <Item
       className={s.item}
-      original={server + item.imageX2}
-      thumbnail={server + item.previewX1}
+      original={APIUrl + item.imageX2}
+      thumbnail={APIUrl + item.previewX1}
       width="1288"
       height="800"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src={server + item.previewX1} />
+        <img ref={ref} onClick={open} src={APIUrl + item.previewX1} />
       )}
     </Item>
   ));

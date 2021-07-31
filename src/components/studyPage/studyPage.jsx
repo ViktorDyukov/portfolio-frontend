@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router";
 import useApiRequest from "../_shared/utilities/api.jsx";
+import { APIUrl } from "../_shared/utilities/api.jsx";
 import s from "./studyPage.module.css";
 import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import InfoItem from "../_shared/infoItem/infoItem";
+import Tags from "../_shared/tags/tags.jsx";
 
 const StudyPage = () => {
   let id = useParams().id;
@@ -25,24 +27,10 @@ const StudyPage = () => {
       <Helmet>
         <title>{`${data.title} - Ducov`}</title>
       </Helmet>
-
-      <div className={s.root}></div>
       <div className={`all_pages_container ${s.header}`}>
-        <div className={s.temp}>
-          <div>Mobile</div>
-          <div>FinTech</div>
-          <div>Design system</div>
-        </div>
+        <Tags list={data.tag} />
         <h1>{data.title}</h1>
-        <p>
-          I joined the company right when Boosted was prepping to launch its 2nd
-          Gen Board. We quickly teamed up with a design agency (Ueno) to create
-          a landing page for collecting pre-orders. We listed out product specs,
-          slapped on a handful of sexy product renders and pushed go. We listed
-          out product specs, slapped on a handful of sexy product renders and
-          pushed go. We listed out product specs, slapped on a handful of sexy
-          product renders and pushed go.
-        </p>
+        <p>{data.description}</p>
       </div>
 
       <ScrollTrigger
@@ -54,7 +42,11 @@ const StudyPage = () => {
         <Timeline
           target={
             <div id="imgSeparator" className={s.imgSeparator}>
-              <img src="https://dummyimage.com/1200x480/2222AA/AAAAAA.png" />
+              <img
+                srcSet={`${APIUrl}${data.separatorImg_deskX1} 1x, ${APIUrl}${data.separatorImg_deskX2} 2x,`}
+                src={`${APIUrl}${data.separatorImg_deskX1}`}
+              />
+              {/* <img src="https://dummyimage.com/1200x480/2222AA/AAAAAA.png" /> */}
             </div>
           }
         >

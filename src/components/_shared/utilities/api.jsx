@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const server =
+const APIUrl =
   process.env.NODE_ENV === "production"
     ? process.env.REACT_APP_PROD_API_URL
     : process.env.REACT_APP_DEV_API_URL;
 
-export { server };
+export { APIUrl };
 
 const useApiRequest = (key, id = "") => {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
 
-  const url = `${server}/${key}/${id}`;
+  const url = `${APIUrl}/${key}/${id}`;
 
   useEffect(() => {
     const fetchData = () => {
