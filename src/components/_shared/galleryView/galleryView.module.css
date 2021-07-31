@@ -1,5 +1,13 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 860px;
+}
+
 .root img {
-  margin-right: 80px;
+  /* margin-right: 80px;*/
   margin-bottom: 80px;
   cursor: pointer;
+  flex: 0 0 40%;
 }

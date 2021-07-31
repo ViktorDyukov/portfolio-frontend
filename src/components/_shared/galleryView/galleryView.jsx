@@ -8,6 +8,7 @@ import s from "./galleryView.module.css";
 const GalleryView = (props) => {
   let galleryItems = props.images.map((item) => (
     <Item
+      className={s.item}
       original={server + item.imageX2}
       thumbnail={server + item.previewX1}
       width="1288"
