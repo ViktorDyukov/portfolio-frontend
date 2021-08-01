@@ -4,10 +4,10 @@ import s from "./footer.module.css";
 const Footer = () => {
   return (
     <footer className={s.root}>
-      <a href="mailto:mail@dviktorducov.com">mail@dviktorducov.com</a>
+      <a href="mailto:mail@victorduco.com">mail@victorduco.com</a>
       <div className={s.smbuttons}>
-        <a href="/about">LinkedIn</a>
-        <a href="/about">Instagram</a>
+        <a href="https://www.linkedin.com/in/victorducov/">LinkedIn</a>
+        <a href="https://www.instagram.com/victorducov/">Instagram</a>
       </div>
     </footer>
   );

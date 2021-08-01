@@ -51,6 +51,10 @@
   padding: 0.75vw 0;
 }
 
+.content {
+  margin: 64px 0;
+}
+
 @media screen and (max-width: 1200px) {
   .header .buttons {
     width: 100%;
@@ -112,6 +116,6 @@
     font-size: 56px;
   }
   .header .item_text p {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
