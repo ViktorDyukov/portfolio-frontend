@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import s from "./highlight.module.css";
 import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import { Link, NavLink } from "react-router-dom";
-import { APIUrl } from "../_shared/utilities/api.jsx";
 import { HideAt, ShowAt } from "react-with-breakpoints";
-import MainButton from "../_shared/mainButton/mainButton";
+import ImgSet from "../_shared/imgSet/imgSet";
 
 const Highlight = React.forwardRef((props, ref) => {
   return (
@@ -16,10 +15,7 @@ const Highlight = React.forwardRef((props, ref) => {
               <div className={s.root}>
                 <NavLink key={props.id} exact to={`/study/${props.id}/`}>
                   <div className={s.hlbox}>
-                    <img
-                      srcSet={`${APIUrl}${props.prdX1} 1x, ${APIUrl}${props.prdX2} 2x,`}
-                      src={`${APIUrl}${props.prdX1}`}
-                    />
+                    <ImgSet imgX1={props.prdX1} imgX2={props.prdX2} />
                   </div>
                 </NavLink>
               </div>

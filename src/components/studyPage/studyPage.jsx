@@ -2,11 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router";
 import useApiRequest from "../_shared/utilities/api.jsx";
-import { APIUrl } from "../_shared/utilities/api.jsx";
 import s from "./studyPage.module.css";
 import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import InfoItem from "../_shared/infoItem/infoItem";
 import Tags from "../_shared/tags/tags.jsx";
+import ImgSet from "../_shared/imgSet/imgSet.jsx";
 
 const StudyPage = () => {
   let id = useParams().id;
@@ -46,11 +46,10 @@ const StudyPage = () => {
               className={s.imgSeparator}
               // style={{ backgroundColor: data.bg_color }}
             >
-              <img
-                srcSet={`${APIUrl}${data.separatorImg_deskX1} 1x, ${APIUrl}${data.separatorImg_deskX2} 2x,`}
-                src={`${APIUrl}${data.separatorImg_deskX1}`}
+              <ImgSet
+                imgX1={data.separatorImg_deskX1}
+                imgX2={data.separatorImg_deskX2}
               />
-              {/* <img src="https://dummyimage.com/1200x2000/ffffff/666666" /> */}
             </div>
           }
         >
