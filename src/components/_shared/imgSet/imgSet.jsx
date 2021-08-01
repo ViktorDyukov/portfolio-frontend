@@ -14,7 +14,7 @@ const ImgSet = ({ imgX1, imgX2 }) => {
       />
       <img
         srcSet={`${APIUrl}${imgX1} 1x, ${APIUrl}${imgX2} 2x,`}
-        src={`$${APIUrl}{imgX1}`}
+        src={`${APIUrl}${imgX1}`}
       />
     </picture>
   );
