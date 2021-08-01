@@ -6,6 +6,7 @@ import Highlight from "../homePage/highlight";
 import LinkSection from "../_shared/linkSection/linkSection";
 import s from "./allStudiesPage.module.css";
 import FilterLink from "./filterLink";
+import getSubdomain from "../_shared/utilities/getSubdomain";
 
 const AllStudiesPage = (props) => {
   let [origData, setOrigData] = useState([]);
@@ -21,7 +22,10 @@ const AllStudiesPage = (props) => {
   ];
 
   // start - getting data
-  const { data, error, isLoaded, setData } = useApiRequest("cases");
+  const { data, error, isLoaded, setData } = useApiRequest(
+    "cases",
+    getSubdomain()
+  );
 
   useEffect(() => {
     if (origData == 0) {
