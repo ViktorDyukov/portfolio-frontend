@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import { HideAt, ShowAt } from "react-with-breakpoints";
 import ImgSet from "../_shared/imgSet/imgSet";
 import { APIUrl } from "../_shared/utilities/api";
+import MainButton from "../_shared/mainButton/mainButton";
 
 const Highlight = React.forwardRef((props, ref) => {
   return (
@@ -41,45 +42,41 @@ const Highlight = React.forwardRef((props, ref) => {
       </HideAt>
 
       <ShowAt breakpoint="mediumAndBelow">
-        <div>
+        <Link
+          to={`${window.location.host}/study/${props.id}/`}
+          className={s.m_root}
+        >
+          <div className={s.lower}>
+            <h3>Validation of a P2P lending agregator business idea </h3>
+            <MainButton text="Open study" width="40%" height="44px" />
+          </div>
           <ScrollTrigger
-            start="top top"
-            end="bottom -200px"
-            pin={true}
+            start="top bottom"
+            end="bottom center"
+            pin={false}
             scrub={0.5}
           >
             <Timeline
               target={
-                <Link
-                  to={`${window.location.host}/study/${props.id}/`}
-                  className={s.m_root}
-                >
-                  <div
-                    className={s.upper}
-                    style={{
-                      backgroundImage: `url('${APIUrl}${props.prdX1}')`,
-                    }}
-                  ></div>
-                  <div className={s.lower}>
-                    <h3>
-                      Validation of a P2P lending agregator business idea{" "}
-                    </h3>
-                    {/* <MainButton text="Open study" /> */}
-                  </div>
-                </Link>
+                <div
+                  className={s.upper}
+                  style={{
+                    backgroundImage: `url('${APIUrl}${props.prdX1}')`,
+                  }}
+                ></div>
               }
             >
               <Tween
-                to={{
-                  opacity: "0.75",
-                  scale: "0.75",
+                from={{
+                  opacity: "0.2",
+                  scale: "0.8",
                 }}
                 duration={1}
-                ease="power4.inOut"
+                ease="power4.easeOut"
               ></Tween>
             </Timeline>
           </ScrollTrigger>
-        </div>
+        </Link>
       </ShowAt>
     </div>
   );

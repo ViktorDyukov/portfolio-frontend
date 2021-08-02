@@ -2,12 +2,20 @@ import React from "react";
 import s from "./mainButton.module.css";
 
 const MainButton = (props) => {
+  let button_height = "44px";
   let button_width = "100%";
+  if (props.height) {
+    button_height = props.height;
+  }
   if (props.width) {
     button_width = props.width;
   }
+
   return (
-    <button className={s.root} style={{ width: button_width }}>
+    <button
+      className={s.root}
+      style={{ width: button_width, height: button_height }}
+    >
       {props.text}
     </button>
   );
