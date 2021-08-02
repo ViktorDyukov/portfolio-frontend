@@ -50,3 +50,9 @@
     line-height: 32px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .item {
+    list-style-position: inside;
+  }
+}
