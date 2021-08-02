@@ -53,11 +53,6 @@ const Highlight = React.forwardRef((props, ref) => {
           to={`${window.location.host}/study/${props.id}/`}
           className={s.m_root}
         >
-          <div className={s.lower}>
-            <Tags list={props.tags} small />
-            <h3>Validation of a P2P lending agregator business idea </h3>
-            <MainButton text="Open study" width="40%" height="44px" />
-          </div>
           <ScrollTrigger
             start="top bottom"
             end="bottom center"
@@ -76,14 +71,19 @@ const Highlight = React.forwardRef((props, ref) => {
             >
               <Tween
                 from={{
-                  opacity: "0.2",
-                  scale: "0.8",
+                  opacity: "0",
+                  scale: "1.1",
                 }}
                 duration={1}
                 ease="power4.easeOut"
               ></Tween>
             </Timeline>
           </ScrollTrigger>
+          <div className={s.lower}>
+            {/* <Tags list={props.tags} small /> */}
+            <h3>Validation of a P2P lending agregator business idea </h3>
+            <MainButton text="Open study" height="44px" />
+          </div>
         </Link>
       </ShowAt>
     </div>

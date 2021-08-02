@@ -24,16 +24,14 @@
 
 .upper {
   flex: 8;
-  height: 40vh;
-  border-radius: 16px;
-  margin: 16px;
+  height: 50vh;
   background-position: 83% 0%;
 }
 
 .lower {
   flex: 2;
   width: 100%;
-  padding: 32px 16px 0px 16px;
+  padding: 32px 12px;
 
   display: flex;
   flex-direction: column;
