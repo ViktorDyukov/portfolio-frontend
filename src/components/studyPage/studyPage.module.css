@@ -29,3 +29,25 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (max-width: 480px) {
+  .header {
+    margin: 160px 0 32px 0;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+  .header p {
+    font-size: 16px;
+    line-height: 170%;
+  }
+
+  .imgSeparator {
+    display: none;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+}
