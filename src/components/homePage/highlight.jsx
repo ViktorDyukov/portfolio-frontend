@@ -6,10 +6,14 @@ import { HideAt, ShowAt } from "react-with-breakpoints";
 import ImgSet from "../_shared/imgSet/imgSet";
 import { APIUrl } from "../_shared/utilities/api";
 import MainButton from "../_shared/mainButton/mainButton";
+import Tags from "../_shared/tags/tags";
 
 const Highlight = React.forwardRef((props, ref) => {
   return (
     <div>
+      {/* ### */}
+      {/* Desktop section */}
+
       <HideAt breakpoint="mediumAndBelow">
         <ScrollTrigger
           start="top bottom"
@@ -41,12 +45,16 @@ const Highlight = React.forwardRef((props, ref) => {
         </ScrollTrigger>
       </HideAt>
 
+      {/* ### */}
+      {/* Mobile section */}
+
       <ShowAt breakpoint="mediumAndBelow">
         <Link
           to={`${window.location.host}/study/${props.id}/`}
           className={s.m_root}
         >
           <div className={s.lower}>
+            <Tags list={props.tags} small />
             <h3>Validation of a P2P lending agregator business idea </h3>
             <MainButton text="Open study" width="40%" height="44px" />
           </div>

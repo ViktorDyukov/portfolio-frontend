@@ -3,6 +3,10 @@
   margin-bottom: 16px;
 }
 
+.small {
+  margin-bottom: 12px;
+}
+
 .root > div {
   border: 2px rgba(255, 255, 255, 0.4) solid;
   background-color: rgba(255, 255, 255, 0.03);
@@ -10,4 +14,11 @@
   padding: 8px 20px;
   font-size: 14px;
   margin-right: 16px;
+  color: white;
+}
+
+.small > div {
+  padding: 4px 12px;
+  font-size: 12px;
+  margin-right: 12px;
 }
