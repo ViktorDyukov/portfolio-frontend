@@ -4,17 +4,24 @@ import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import { Link, NavLink } from "react-router-dom";
 import { HideAt, ShowAt } from "react-with-breakpoints";
 import ImgSet from "../_shared/imgSet/imgSet";
+import { APIUrl } from "../_shared/utilities/api";
 
 const Highlight = React.forwardRef((props, ref) => {
   return (
     <div>
       <HideAt breakpoint="mediumAndBelow">
-        <ScrollTrigger start="top bottom" end="top 200px" scrub={0.5}>
+        <ScrollTrigger
+          start="top bottom"
+          end="bottom center"
+          scrub={0.5}
+          // markers={true}
+        >
           <Timeline
             target={
               <div className={s.root}>
                 <NavLink key={props.id} exact to={`/study/${props.id}/`}>
                   <div className={s.hlbox}>
+                    <img src={`${APIUrl}${props.prsvg}`} className={s.svgimg} />
                     <ImgSet imgX1={props.prdX1} imgX2={props.prdX2} />
                   </div>
                 </NavLink>
@@ -23,11 +30,11 @@ const Highlight = React.forwardRef((props, ref) => {
           >
             <Tween
               from={{
-                opacity: "0.2",
-                scale: "0.98",
+                opacity: "0",
+                scale: "0.9",
               }}
-              duration={1.5}
-              ease="power2.inOut"
+              duration={1}
+              ease="Power3.easeOut"
             ></Tween>
           </Timeline>
         </ScrollTrigger>
@@ -47,7 +54,12 @@ const Highlight = React.forwardRef((props, ref) => {
                   to={`${window.location.host}/study/${props.id}/`}
                   className={s.m_root}
                 >
-                  <div className={s.upper}></div>
+                  <div
+                    className={s.upper}
+                    style={{
+                      backgroundImage: `url('${APIUrl}${props.prdX1}')`,
+                    }}
+                  ></div>
                   <div className={s.lower}>
                     <h3>
                       Validation of a P2P lending agregator business idea{" "}

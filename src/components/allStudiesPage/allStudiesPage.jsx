@@ -46,6 +46,7 @@ const AllStudiesPage = (props) => {
     <Highlight
       prdX1={item.preview_deskX1}
       prdX2={item.preview_deskX2}
+      prsvg={item.preview_svg_deskX2}
       key={item.id}
       id={item.id}
     />
