@@ -17,6 +17,7 @@ const Highlight = React.forwardRef((props, ref) => {
   const root_desktop = useRef(null);
   const svg_desktop = useRef(null);
   const upper_mobile = useRef(null);
+  const all_markers = false;
 
   useEffect(() => {
     gsap.from(root_desktop.current, {
@@ -27,7 +28,7 @@ const Highlight = React.forwardRef((props, ref) => {
         trigger: root_desktop.current,
         start: "top bottom",
         end: "bottom center",
-        markers: true,
+        markers: all_markers,
         scrub: 0.5,
       },
     });
@@ -41,7 +42,7 @@ const Highlight = React.forwardRef((props, ref) => {
         trigger: svg_desktop.current,
         start: "top bottom",
         end: "bottom center",
-        // markers: true,
+        markers: all_markers,
         scrub: 0.5,
       },
     });
@@ -56,7 +57,7 @@ const Highlight = React.forwardRef((props, ref) => {
         trigger: upper_mobile.current,
         start: "top bottom",
         end: "bottom center",
-        markers: true,
+        markers: all_markers,
         scrub: 0.5,
       },
     });
