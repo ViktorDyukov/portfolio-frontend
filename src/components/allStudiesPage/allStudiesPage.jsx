@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { useParams } from "react-router";
 import useApiRequest from "../_shared/utilities/api.jsx";
 import Highlight from "../homePage/highlight";
 import LinkSection from "../_shared/linkSection/linkSection";
