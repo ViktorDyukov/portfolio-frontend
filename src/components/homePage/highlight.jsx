@@ -26,7 +26,7 @@ const Highlight = React.forwardRef((props, ref) => {
         start: "top bottom",
         end: "bottom center",
         markers: all_markers,
-        scrub: 0.5,
+        scrub: true,
       },
     });
 
