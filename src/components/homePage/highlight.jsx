@@ -35,13 +35,13 @@ const Highlight = React.forwardRef((props, ref) => {
 
   useEffect(() => {
     gsap.from(svg_desktop.current, {
-      opacity: "-0.5",
-      ease: "power3.easeOut",
+      opacity: "-1",
+      ease: " Expo.easeOut",
       scrollTrigger: {
         trigger: svg_desktop.current,
         start: "top bottom",
         end: "bottom center",
-        markers: true,
+        // markers: true,
         scrub: 0.5,
       },
     });
