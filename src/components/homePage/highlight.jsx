@@ -80,8 +80,7 @@ const Highlight = React.forwardRef((props, ref) => {
             </Timeline>
           </ScrollTrigger>
           <div className={s.lower}>
-            {/* <Tags list={props.tags} small /> */}
-            <h3>Validation of a P2P lending agregator business idea </h3>
+            <h3>{props.title}</h3>
             <MainButton text="Open study" height="44px" />
           </div>
         </Link>

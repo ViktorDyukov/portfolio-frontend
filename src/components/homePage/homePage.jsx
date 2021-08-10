@@ -26,6 +26,7 @@ const HomePage = () => {
       prdX2={item.preview_deskX2}
       prsvg={item.preview_svg_deskX2}
       tags={item.tag}
+      title={item.title}
       key={item.id}
       id={item.id}
     />
