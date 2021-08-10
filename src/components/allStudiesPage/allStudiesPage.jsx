@@ -7,11 +7,10 @@ import LinkSection from "../_shared/linkSection/linkSection";
 import s from "./allStudiesPage.module.css";
 import FilterLink from "./filterLink";
 import getSubdomain from "../_shared/utilities/getSubdomain";
+import filterArray from "../_shared/utilities/filterArray.js";
 
 const AllStudiesPage = (props) => {
-  let [origData, setOrigData] = useState([]);
   let [activeFilter, setActiveFilter] = useState([-1]);
-
   let filterItems = [
     { name: "All studies", id: -1 },
     { name: "FinTech", id: 1 },
@@ -27,12 +26,6 @@ const AllStudiesPage = (props) => {
     getSubdomain()
   );
 
-  useEffect(() => {
-    if (origData == 0) {
-      setOrigData(data);
-    }
-  }, [data]);
-
   if (error !== null) {
     return <div>Error: {error.message}</div>;
   }
@@ -41,61 +34,33 @@ const AllStudiesPage = (props) => {
   }
   // end - getting data
 
-  // all studies
-  let hl_list = data.map((item) => (
-    <Highlight
-      prdX1={item.preview_deskX1}
-      prdX2={item.preview_deskX2}
-      prsvg={item.preview_svg_deskX2}
-      prBgPos={item.preview_bgposition}
-      tags={item.tag}
-      title={item.title}
-      key={item.id}
-      id={item.id}
-    />
-  ));
-
-  // start - FILTERS
-
+  // filters output
   let hl_filter = filterItems.map((item) => {
-    let active = false;
-    if (activeFilter == item.id) {
-      active = true;
-    }
+    let active = activeFilter == item.id ? true : false;
     return (
       <FilterLink
-        onClick={() => filterUpdate(item.id)}
+        onClick={() => setActiveFilter(item.id)}
         name={item.name}
         active={active}
       />
     );
   });
 
-  const filterArray = (key) => {
-    return function (item) {
-      let tagarr = item.tag;
-      let res = false;
-      for (var i = 0; i < tagarr.length; i++) {
-        if (tagarr[i].id === key) {
-          res = true;
-        }
-      }
-      return res;
-    };
-  };
-
-  const filterUpdate = (key) => {
-    if (key !== -1) {
-      setData(origData.filter(filterArray(key)));
-      setActiveFilter(key);
-    } else {
-      setData(origData);
-      setActiveFilter(key);
-    }
-  };
-
-  // end - FILTERS
-
+  // items output
+  let hl_list = data
+    .filter(filterArray(activeFilter))
+    .map((item) => (
+      <Highlight
+        prdX1={item.preview_deskX1}
+        prdX2={item.preview_deskX2}
+        prsvg={item.preview_svg_deskX2}
+        prBgPos={item.preview_bgposition}
+        tags={item.tag}
+        title={item.title}
+        key={item.id}
+        id={item.id}
+      />
+    ));
   return (
     <div className={s.root}>
       <Helmet>
