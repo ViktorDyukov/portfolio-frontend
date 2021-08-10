@@ -37,26 +37,12 @@ const Highlight = React.forwardRef((props, ref) => {
     }).from(
       svg_desktop.current,
       {
-        opacity: "-0.5",
+        opacity: "0",
         ease: "expo.easeOut",
       },
       "<"
     );
   }, []);
-
-  // useEffect(() => {
-  //   gsap.from(svg_desktop.current, {
-  //     opacity: "-1",
-  //     ease: " Expo.easeOut",
-  //     scrollTrigger: {
-  //       trigger: svg_desktop.current,
-  //       start: "top bottom",
-  //       end: "bottom center",
-  //       markers: all_markers,
-  //       scrub: 0.5,
-  //     },
-  //   });
-  // }, []);
 
   useEffect(() => {
     gsap.from(upper_mobile.current, {
