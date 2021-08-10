@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import s from "./highlight.module.css";
 import { Link, NavLink } from "react-router-dom";
 import { HideAt, ShowAt } from "react-with-breakpoints";
@@ -10,10 +10,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Highlight = React.forwardRef((props, ref) => {
   gsap.registerPlugin(ScrollTrigger);
+  const [isShown, setIsShown] = useState(false);
+  let waitBeforeShow = 500;
   const root_desktop = useRef(null);
   const svg_desktop = useRef(null);
   const upper_mobile = useRef(null);
-  const all_markers = true;
+  const all_markers = false;
 
   useEffect(() => {
     console.log(root_desktop.current);
@@ -21,7 +23,7 @@ const Highlight = React.forwardRef((props, ref) => {
       scrollTrigger: {
         trigger: root_desktop.current,
         start: "top bottom",
-        end: "bottom center",
+        end: "bottom bottom",
         markers: all_markers,
         scrub: true,
       },
