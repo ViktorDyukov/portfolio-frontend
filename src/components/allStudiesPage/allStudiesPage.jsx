@@ -47,6 +47,7 @@ const AllStudiesPage = (props) => {
   });
 
   // items output
+  console.log(data.filter(filterArray(activeFilter)));
   let hl_list = data
     .filter(filterArray(activeFilter))
     .map((item) => (
@@ -57,7 +58,7 @@ const AllStudiesPage = (props) => {
         prBgPos={item.preview_bgposition}
         tags={item.tag}
         title={item.title}
-        key={item.id}
+        key={`${activeFilter}_${item.id}`}
         id={item.id}
       />
     ));
