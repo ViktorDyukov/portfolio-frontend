@@ -40,20 +40,20 @@ const Highlight = React.forwardRef((props, ref) => {
     );
   }, []);
 
-  useEffect(() => {
-    gsap.from(upper_mobile.current, {
-      opacity: "0",
-      scale: "1.1",
-      ease: "power4.easeOut",
-      scrollTrigger: {
-        trigger: upper_mobile.current,
-        start: "top bottom",
-        end: "bottom center",
-        markers: all_markers,
-        scrub: 0.5,
-      },
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.from(upper_mobile.current, {
+  //     opacity: "0",
+  //     scale: "1.1",
+  //     ease: "power4.easeOut",
+  //     scrollTrigger: {
+  //       trigger: upper_mobile.current,
+  //       start: "top bottom",
+  //       end: "bottom center",
+  //       markers: all_markers,
+  //       scrub: 0.5,
+  //     },
+  //   });
+  // }, []);
 
   return (
     <div>
@@ -79,10 +79,7 @@ const Highlight = React.forwardRef((props, ref) => {
       {/* Mobile section */}
 
       <ShowAt breakpoint="mediumAndBelow">
-        <Link
-          to={`${window.location.host}/study/${props.id}/`}
-          className={s.m_root}
-        >
+        <Link to={`/study/${props.id}/`} className={s.m_root}>
           <div
             className={s.upper}
             ref={upper_mobile}
