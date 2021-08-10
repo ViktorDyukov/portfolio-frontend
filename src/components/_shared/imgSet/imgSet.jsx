@@ -9,13 +9,10 @@ const ImgSet = ({ imgX1, imgX2 }) => {
         type="image/webp"
       />
       <source
-        srcSet={`${APIUrl}${imgX1} 1x, ${APIUrl}${imgX2}ebp 2x`}
+        srcSet={`${APIUrl}${imgX1} 1x, ${APIUrl}${imgX2} 2x`}
         type="image/png"
       />
-      <img
-      // srcSet={`${APIUrl}${imgX1} 1x, ${APIUrl}${imgX2} 2x`}
-      // src={`${APIUrl}${imgX1}`}
-      />
+      <img />
     </picture>
   );
 };

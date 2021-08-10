@@ -1,12 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router";
 import useApiRequest from "../_shared/utilities/api.jsx";
 import s from "./studyPage.module.css";
-import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import InfoItem from "../_shared/infoItem/infoItem";
 import Tags from "../_shared/tags/tags.jsx";
-import ImgSet from "../_shared/imgSet/imgSet.jsx";
+import SeparatorImg from "./separatorImg.jsx";
 
 const StudyPage = () => {
   let id = useParams().id;
@@ -32,38 +31,10 @@ const StudyPage = () => {
         <h1>{data.title}</h1>
         <p>{data.description}</p>
       </div>
-
-      <ScrollTrigger
-        start="top bottom"
-        end="bottom center"
-        pin={false}
-        scrub={0.5}
-      >
-        <Timeline
-          target={
-            <div
-              id="imgSeparator"
-              className={s.imgSeparator}
-              // style={{ backgroundColor: data.bg_color }}
-            >
-              <ImgSet
-                imgX1={data.separatorImg_deskX1}
-                imgX2={data.separatorImg_deskX2}
-              />
-            </div>
-          }
-        >
-          <Tween
-            from={{
-              scale: "0.9",
-              opacity: "0.1",
-            }}
-            duration={1}
-            ease="Power3.easeOut"
-          ></Tween>
-        </Timeline>
-      </ScrollTrigger>
-
+      <SeparatorImg
+        imgX1={data.separatorImg_deskX1}
+        imgX2={data.separatorImg_deskX2}
+      />
       <div className={`all_pages_container ${s.content}`}>
         {data.caseInfoSection.map((item) => (
           <InfoItem title={item.title} body={item.body} />

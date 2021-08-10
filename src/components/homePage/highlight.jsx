@@ -5,19 +5,15 @@ import { HideAt, ShowAt } from "react-with-breakpoints";
 import ImgSet from "../_shared/imgSet/imgSet";
 import { APIUrl } from "../_shared/utilities/api";
 import MainButton from "../_shared/mainButton/mainButton";
-import Tags from "../_shared/tags/tags";
-
-// import { Tween, ScrollTrigger, Timeline } from "react-gsap";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Item } from "react-photoswipe-gallery";
 
 const Highlight = React.forwardRef((props, ref) => {
   gsap.registerPlugin(ScrollTrigger);
   const root_desktop = useRef(null);
   const svg_desktop = useRef(null);
   const upper_mobile = useRef(null);
-  const all_markers = false;
+  const all_markers = true;
 
   useEffect(() => {
     let tl = gsap.timeline({

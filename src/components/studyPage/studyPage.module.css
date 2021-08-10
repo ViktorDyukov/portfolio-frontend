@@ -19,17 +19,6 @@
   margin-bottom: 96px;
 }
 
-.imgSeparator {
-  width: 100%;
-}
-
-.imgSeparator img {
-  height: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @media screen and (max-width: 480px) {
   .header {
     margin: 160px 0 32px 0;
@@ -43,15 +32,10 @@
     line-height: 170%;
   }
 
-  .imgSeparator {
-    display: none;
-  }
-
   .content {
     margin-top: 0;
   }
 }
 
 @media screen and (max-width: 480px) {
-
 }
