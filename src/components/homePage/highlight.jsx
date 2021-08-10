@@ -15,45 +15,45 @@ const Highlight = React.forwardRef((props, ref) => {
   const upper_mobile = useRef(null);
   const all_markers = true;
 
-  // useEffect(() => {
-  //   let tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: root_desktop.current,
-  //       start: "top bottom",
-  //       end: "bottom center",
-  //       markers: all_markers,
-  //       scrub: true,
-  //     },
-  //   });
+  useEffect(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: root_desktop.current,
+        start: "top bottom",
+        end: "bottom center",
+        markers: all_markers,
+        scrub: true,
+      },
+    });
 
-  //   tl.from(root_desktop.current, {
-  //     opacity: "0",
-  //     scale: "0.9",
-  //     ease: "power3.easeOut",
-  //   }).from(
-  //     svg_desktop.current,
-  //     {
-  //       opacity: "-1",
-  //       ease: "expo.easeOut",
-  //     },
-  //     "<"
-  //   );
-  // }, []);
+    tl.from(root_desktop.current, {
+      opacity: "0",
+      scale: "0.9",
+      ease: "power3.easeOut",
+    }).from(
+      svg_desktop.current,
+      {
+        opacity: "-1",
+        ease: "expo.easeOut",
+      },
+      "<"
+    );
+  }, []);
 
-  // useEffect(() => {
-  //   gsap.from(upper_mobile.current, {
-  //     opacity: "0",
-  //     scale: "1.1",
-  //     ease: "power4.easeOut",
-  //     scrollTrigger: {
-  //       trigger: upper_mobile.current,
-  //       start: "top bottom",
-  //       end: "bottom center",
-  //       markers: all_markers,
-  //       scrub: 0.5,
-  //     },
-  //   });
-  // }, []);
+  useEffect(() => {
+    gsap.from(upper_mobile.current, {
+      opacity: "0",
+      scale: "1.1",
+      ease: "power4.easeOut",
+      scrollTrigger: {
+        trigger: upper_mobile.current,
+        start: "top bottom",
+        end: "bottom center",
+        markers: all_markers,
+        scrub: 0.5,
+      },
+    });
+  }, []);
 
   return (
     <div>
