@@ -65,6 +65,7 @@ const Highlight = React.forwardRef((props, ref) => {
                   className={s.upper}
                   style={{
                     backgroundImage: `url('${APIUrl}${props.prdX2}')`,
+                    backgroundPosition: `${props.prBgPos} 0%`,
                   }}
                 ></div>
               }
