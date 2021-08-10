@@ -12,6 +12,16 @@
   width: 100%;
 }
 
+.svgimg {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 40px 64px;
+}
+
 .m_root {
   padding: 0;
   margin-bottom: 72px;
@@ -32,10 +42,9 @@
   flex: 2;
   width: 100%;
   padding: 24px 12px;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: left;
 }
 
 .lower h3 {
@@ -45,14 +54,4 @@
   letter-spacing: 0.4px;
   text-decoration: none;
   padding-bottom: 24px;
-}
-
-.svgimg {
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  max-height: 100%;
-  padding: 40px 64px;
 }
