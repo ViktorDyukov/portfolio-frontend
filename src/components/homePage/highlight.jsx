@@ -20,10 +20,7 @@ const Highlight = React.forwardRef((props, ref) => {
   const all_markers = false;
 
   useEffect(() => {
-    gsap.from(root_desktop.current, {
-      opacity: "0",
-      scale: "0.9",
-      ease: "power3.easeOut",
+    let tl = gsap.timeline({
       scrollTrigger: {
         trigger: root_desktop.current,
         start: "top bottom",
@@ -32,21 +29,34 @@ const Highlight = React.forwardRef((props, ref) => {
         scrub: 0.5,
       },
     });
+
+    tl.from(root_desktop.current, {
+      opacity: "0",
+      scale: "0.9",
+      ease: "power3.easeOut",
+    }).from(
+      svg_desktop.current,
+      {
+        opacity: "-0.5",
+        ease: "expo.easeOut",
+      },
+      "<"
+    );
   }, []);
 
-  useEffect(() => {
-    gsap.from(svg_desktop.current, {
-      opacity: "-1",
-      ease: " Expo.easeOut",
-      scrollTrigger: {
-        trigger: svg_desktop.current,
-        start: "top bottom",
-        end: "bottom center",
-        markers: all_markers,
-        scrub: 0.5,
-      },
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.from(svg_desktop.current, {
+  //     opacity: "-1",
+  //     ease: " Expo.easeOut",
+  //     scrollTrigger: {
+  //       trigger: svg_desktop.current,
+  //       start: "top bottom",
+  //       end: "bottom center",
+  //       markers: all_markers,
+  //       scrub: 0.5,
+  //     },
+  //   });
+  // }, []);
 
   useEffect(() => {
     gsap.from(upper_mobile.current, {
