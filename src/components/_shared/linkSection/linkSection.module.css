@@ -16,7 +16,7 @@
   margin-bottom: 24px;
 }
 
-.item p {
+.item > p {
   font-size: 18px;
   color: #ffffff;
   letter-spacing: 0.47px;
@@ -61,7 +61,7 @@
     margin-bottom: 12px;
   }
 
-  .item p {
+  .item > p {
     margin-bottom: 16px;
   }
 }

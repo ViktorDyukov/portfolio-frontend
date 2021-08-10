@@ -16,7 +16,8 @@ const MainButton = (props) => {
       className={s.root}
       style={{ width: button_width, height: button_height }}
     >
-      {props.text}
+      <div>{props.text}</div>
+      <img src={process.env.PUBLIC_URL + `/icons/button_arrow.svg`} />
     </button>
   );
 };

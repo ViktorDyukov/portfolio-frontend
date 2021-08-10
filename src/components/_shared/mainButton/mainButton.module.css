@@ -1,17 +1,27 @@
 .root {
   display: inline-block;
   background-color: transparent;
-
   color: #ffffff;
   font-size: 16px;
   letter-spacing: 0.42px;
-
   border: 2px solid #ffffff;
   border-radius: 12px;
-
   transition: all 0.1s;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .root:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.root > div {
+  padding-right: 10px;
+}
+
+.root > img {
+  padding-top: 2px;
 }
