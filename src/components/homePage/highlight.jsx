@@ -10,8 +10,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Highlight = React.forwardRef((props, ref) => {
   gsap.registerPlugin(ScrollTrigger);
-  const [isShown, setIsShown] = useState(false);
-  let waitBeforeShow = 500;
   const root_desktop = useRef(null);
   const svg_desktop = useRef(null);
   const upper_mobile = useRef(null);
