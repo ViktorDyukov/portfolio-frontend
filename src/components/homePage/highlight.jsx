@@ -23,7 +23,7 @@ const Highlight = React.forwardRef((props, ref) => {
         start: "top bottom",
         end: "bottom bottom",
         markers: all_markers,
-        scrub: 2,
+        scrub: 1,
       },
     });
 
@@ -34,7 +34,7 @@ const Highlight = React.forwardRef((props, ref) => {
     }).from(
       svg_desktop.current,
       {
-        opacity: "-1.5",
+        opacity: "-1",
         ease: "expo.easeOut",
       },
       "<"
