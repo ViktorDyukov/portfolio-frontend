@@ -65,11 +65,9 @@ const Highlight = React.forwardRef((props, ref) => {
         <div className={s.root} ref={root_desktop}>
           <NavLink key={props.id} exact to={`/study/${props.id}/`}>
             <div className={s.hlbox}>
-              <img
-                ref={svg_desktop}
-                src={`${APIUrl}${props.prsvg}`}
-                className={s.svgimg}
-              />
+              <div ref={svg_desktop}>
+                <img src={`${APIUrl}${props.prsvg}`} className={s.svgimg} />
+              </div>
               <ImgSet imgX1={props.prdX1} imgX2={props.prdX2} />
             </div>
           </NavLink>
