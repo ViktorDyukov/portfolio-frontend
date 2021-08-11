@@ -6,31 +6,31 @@ const LinkSection = () => {
   return (
     <div className={s.root}>
       <div className={s.item}>
-        <h3>All Projects</h3>
+        <h3>All Studies</h3>
         <p>
-          Enchansing IDT internal tools with the consistent employee experience.
-          Vitya is a designer and art director who loves to craft a good story.
-          I do FinTech design
+          I believe that flexibility is one of the main skills for a UX
+          designer. Check my experience in working in different set-ups and on
+          different types of designs tasks.
         </p>
-        <MainButton text="Show more" width="180px" />
+        <MainButton link="/casestudies" text="Show all" width="180px" />
       </div>
       <div className={s.item}>
-        <h3>Who is Viktor</h3>
+        <h3>About me</h3>
         <p>
-          Enchansing IDT internal tools with the consistent employee experience.
-          Vitya is a designer and art director who loves to craft a good story.
-          I do FinTech design
+          Stuff that is not related to work. Here you can find more about my
+          values, life goals, and interests that give me the motivation to do
+          what I do every day.
         </p>
-        <MainButton text="Show more" width="180px" />
+        <MainButton link="/about" text="Open page" width="180px" />
       </div>
       <div className={s.item}>
-        <h3>QA Section</h3>
+        <h3>Mentoring</h3>
         <p>
-          Enchansing IDT internal tools with the consistent employee experience.
-          Vitya is a designer and art director who loves to craft a good story.
-          I do FinTech design
+          This world is built on mutual help to each other. I like to help
+          beginner designers. And this helps me to rethink some foundation
+          bricks of my knowledge.
         </p>
-        <MainButton text="Show more" width="180px" />
+        <MainButton link="/page/mentoring" text="Learn more" width="180px" />
       </div>
     </div>
   );

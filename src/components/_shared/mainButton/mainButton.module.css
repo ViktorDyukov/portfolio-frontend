@@ -20,6 +20,7 @@
 
 .root > div {
   padding-right: 10px;
+  text-decoration: none;
 }
 
 .root > img {

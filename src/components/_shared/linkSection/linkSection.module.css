@@ -53,8 +53,8 @@
   }
 
   .item {
+    padding: 0;
     padding-bottom: 40px;
-    padding: 32px;
   }
 
   .item h3 {

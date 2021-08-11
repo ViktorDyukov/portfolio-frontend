@@ -12,13 +12,15 @@ const MainButton = (props) => {
   }
 
   return (
-    <button
-      className={s.root}
-      style={{ width: button_width, height: button_height }}
-    >
-      <div>{props.text}</div>
-      <img src={process.env.PUBLIC_URL + `/icons/button_arrow.svg`} />
-    </button>
+    <a href={props.link}>
+      <div
+        className={s.root}
+        style={{ width: button_width, height: button_height }}
+      >
+        <div>{props.text}</div>
+        <img src={process.env.PUBLIC_URL + `/icons/button_arrow.svg`} />
+      </div>
+    </a>
   );
 };
 
