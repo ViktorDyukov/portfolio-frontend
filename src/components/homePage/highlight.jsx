@@ -34,7 +34,7 @@ const Highlight = React.forwardRef((props, ref) => {
     }).from(
       svg_desktop.current,
       {
-        opacity: "-1",
+        opacity: "-1.5",
         ease: "expo.easeOut",
       },
       "<"

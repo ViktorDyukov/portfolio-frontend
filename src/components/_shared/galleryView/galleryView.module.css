@@ -12,6 +12,12 @@
   flex: 0 0 40%;
 }
 
+@media screen and (max-width: 1200px) {
+  .root img {
+    flex: 0 0 80%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .root img {
     margin-top: 8px;

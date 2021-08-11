@@ -14,7 +14,7 @@ const SeparatorImg = ({ imgX1, imgX2 }) => {
       scrollTrigger: {
         trigger: separator.current,
         start: "top bottom",
-        end: "bottom center",
+        end: "bottom bottom",
         markers: all_markers,
         scrub: true,
       },
