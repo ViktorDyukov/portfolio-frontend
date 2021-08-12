@@ -1,5 +1,6 @@
 .root {
   height: 100vh;
+  max-height: 100vw;
   display: flex;
   align-items: center;
   padding: 0 15%;
@@ -31,11 +32,19 @@
     height: 60vh;
     padding: 0 5%;
   }
+  .root h1 {
+    font-size: 7vw;
+  }
+
+  .root p {
+    font-size: 3.5vw;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .root {
     height: 90vh;
+    max-height: 160vw;
     padding: 0 5%;
   }
 

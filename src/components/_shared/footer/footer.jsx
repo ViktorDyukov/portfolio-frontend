@@ -6,8 +6,20 @@ const Footer = () => {
     <footer className={s.root}>
       <a href="mailto:mail@victorduco.com">mail@victorduco.com</a>
       <div className={s.smbuttons}>
-        <a href="https://www.linkedin.com/in/victorducov/">LinkedIn</a>
-        <a href="https://www.instagram.com/victorducov/">Instagram</a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/victorducov/"
+        >
+          LinkedIn
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.instagram.com/victorducov/"
+        >
+          Instagram
+        </a>
       </div>
     </footer>
   );

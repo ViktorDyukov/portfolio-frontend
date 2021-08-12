@@ -35,7 +35,7 @@ const MainMenu = () => {
       <div className={s.toggle} onClick={toggleMenu}>
         <img src={process.env.PUBLIC_URL + "/icons/menu.svg"} />
       </div>
-      <a href={process.env.PUBLIC_URL} className={s.logo}>
+      <a href={"/"} className={s.logo}>
         {logoRes}
       </a>
       <ul className={s.menu} ref={menu}>
