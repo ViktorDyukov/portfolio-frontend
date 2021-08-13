@@ -10,12 +10,12 @@ const GalleryView = (props) => {
     <Item
       className={s.item}
       original={APIUrl + item.imageX2 + ".webp"}
-      thumbnail={APIUrl + item.previewX1 + ".webp"}
+      thumbnail={APIUrl + item.previewX2 + ".webp"}
       width="1288"
       height="800"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src={APIUrl + item.previewX1 + ".webp"} />
+        <div className={s.img_container}><img ref={ref} onClick={open} src={APIUrl + item.previewX2 + ".webp"} /></div>
       )}
     </Item>
   ));

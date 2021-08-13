@@ -5,33 +5,27 @@
   max-width: 840px;
 }
 
-.root img {
-  margin-bottom: 80px;
+.img_container {
+  flex: 0 0 46%;
+  margin-bottom: 56px;
   border-radius: 10px;
-  margin-right: 24px;
+}
+
+.img_container img {
+  width: 100%;
   cursor: pointer;
-  flex: 0 0 40%;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1400px) {
-  .root img {
-    width: 50%;
-    margin-bottom: 48px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .root img {
-    width: 80%;
+  .img_container {
+    margin-bottom: 40px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .root {
-    width: 100%;
-  }
-  .root img {
-    margin-top: 8px;
-    margin-bottom: 20px;
+  .img_container {
+    flex: 0 0 100%;
+    margin-bottom: 24px;
   }
 }
