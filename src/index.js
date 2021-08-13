@@ -7,6 +7,9 @@ import MainMenu from "./components/_shared/mainMenu/mainMenu";
 import Footer from "./components/_shared/footer/footer";
 import { BreakpointsProvider } from "react-with-breakpoints";
 import routerData from "./components/_shared/utilities/getRouterData";
+import ReactGA from "react-ga";
+ReactGA.initialize("G-G57HD6TQE7");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const breakpoints = {
   small: 468,
