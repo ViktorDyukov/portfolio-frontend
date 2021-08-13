@@ -7,6 +7,7 @@ import s from "./allStudiesPage.module.css";
 import FilterLink from "./filterLink";
 import getSubdomain from "../_shared/utilities/getSubdomain";
 import filterArray from "../_shared/utilities/filterArray.js";
+import NotFound from "../notFound/notFound.jsx";
 
 const AllStudiesPage = (props) => {
   let [activeFilter, setActiveFilter] = useState([-1]);
@@ -26,7 +27,7 @@ const AllStudiesPage = (props) => {
   );
 
   if (error !== null) {
-    return <div>Error: {error.message}</div>;
+    return <NotFound type="allStudies" />;
   }
   if (!isLoaded || !data.length) {
     return <div></div>;

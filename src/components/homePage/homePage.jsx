@@ -7,13 +7,14 @@ import LinkSection from "../_shared/linkSection/linkSection";
 import { useParams } from "react-router";
 import useApiRequest from "../_shared/utilities/api.jsx";
 import getSubdomain from "../_shared/utilities/getSubdomain";
+import NotFound from "../notFound/notFound.jsx";
 
 const HomePage = () => {
   // start - getting data
   const { data, error, isLoaded } = useApiRequest("highlights", getSubdomain());
 
   if (error !== null) {
-    return <div>Error: {error.message}</div>;
+    return <NotFound type="homePage" />;
   }
   if (!isLoaded || (Array.isArray(data) && !data.length)) {
     return <div></div>;

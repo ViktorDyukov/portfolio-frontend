@@ -6,6 +6,7 @@ import s from "./studyPage.module.css";
 import InfoItem from "../_shared/infoItem/infoItem";
 import Tags from "../_shared/tags/tags.jsx";
 import SeparatorImg from "./separatorImg.jsx";
+import NotFound from "../notFound/notFound.jsx";
 
 const StudyPage = () => {
   let id = useParams().id;
@@ -14,7 +15,7 @@ const StudyPage = () => {
   const { data, error, isLoaded, setData } = useApiRequest("case", id);
 
   if (error !== null) {
-    return <div>Error: {error.message}</div>;
+    return <NotFound type="studyPage" />;
   }
   if (!isLoaded || (Array.isArray(data) && !data.length)) {
     return <div></div>;

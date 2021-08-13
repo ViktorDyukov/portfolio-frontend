@@ -28,7 +28,16 @@ const MainMenu = () => {
     ></Route>
   ));
 
-  let logoRes = <Router>{logo}</Router>;
+  let logoRes = (
+    <Router>
+      <Switch>
+        {logo}
+        <Route>
+          <img src={process.env.PUBLIC_URL + `/icons/logos/main.svg`} />
+        </Route>
+      </Switch>
+    </Router>
+  );
 
   return (
     <nav className={s.root}>

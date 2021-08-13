@@ -27,6 +27,11 @@
   color: white;
 }
 
+.root a {
+  white-space: nowrap;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
   .root {
     height: 60vh;

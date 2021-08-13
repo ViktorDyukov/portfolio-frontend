@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import s from "./textPage.module.css";
 import { useParams } from "react-router";
 import useApiRequest from "../_shared/utilities/api.jsx";
+import NotFound from "../notFound/notFound.jsx";
 
 const TextPage = (props) => {
   let purl = useParams().purl;
@@ -11,7 +12,7 @@ const TextPage = (props) => {
   const { data, error, isLoaded, setData } = useApiRequest("page", purl);
 
   if (error !== null) {
-    return <div>Error: {error.message}</div>;
+    return <NotFound type="studyPage" />;
   }
   if (!isLoaded || (Array.isArray(data) && !data.length)) {
     return <div></div>;
