@@ -54,7 +54,7 @@ const Highlight = React.forwardRef((props, ref) => {
   useEffect(() => {
     let tlm = gsap.timeline({
       scrollTrigger: {
-        trigger: root_desktop.current,
+        trigger: upper_mobile.current,
         start: "top bottom",
         end: "bottom bottom",
         markers: all_markers,
