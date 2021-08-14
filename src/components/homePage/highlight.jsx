@@ -27,14 +27,24 @@ const Highlight = React.forwardRef((props, ref) => {
       },
     });
 
-    tl.from(root_desktop.current, {
-      opacity: "0",
-      scale: "0.9",
-      ease: "power3.easeOut",
-    }).from(
+    tl.fromTo(
+      root_desktop.current,
+      {
+        opacity: "0",
+        scale: "0.9",
+      },
+      {
+        opacity: "1",
+        scale: "1",
+        ease: "power3.easeOut",
+      }
+    ).fromTo(
       svg_desktop.current,
       {
         opacity: "-1",
+      },
+      {
+        opacity: "1",
         ease: "expo.easeOut",
       },
       "<"
@@ -42,18 +52,28 @@ const Highlight = React.forwardRef((props, ref) => {
   }, []);
 
   useEffect(() => {
-    gsap.from(upper_mobile.current, {
-      opacity: "0",
-      scale: "1.1",
-      ease: "power4.easeOut",
+    let tlm = gsap.timeline({
       scrollTrigger: {
-        trigger: upper_mobile.current,
+        trigger: root_desktop.current,
         start: "top bottom",
-        end: "bottom center",
+        end: "bottom bottom",
         markers: all_markers,
-        scrub: 0.5,
+        scrub: 1,
       },
     });
+
+    tlm.fromTo(
+      upper_mobile.current,
+      {
+        opacity: "0",
+        scale: "1.1",
+      },
+      {
+        opacity: "1",
+        scale: "1",
+        ease: "power4.easeOut",
+      }
+    );
   }, []);
 
   return (

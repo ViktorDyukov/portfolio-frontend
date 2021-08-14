@@ -19,11 +19,18 @@ const SeparatorImg = ({ imgX1, imgX2 }) => {
         scrub: true,
       },
     });
-    tl.from(separator.current, {
-      scale: "0.9",
-      opacity: "0.1",
-      ease: "power3.easeOut",
-    });
+    tl.fromTo(
+      separator.current,
+      {
+        scale: "0.9",
+        opacity: "0.1",
+      },
+      {
+        scale: "1",
+        opacity: "1",
+        ease: "power3.easeOut",
+      }
+    );
   }, []);
 
   return (
