@@ -6,9 +6,10 @@ import MainMenu from "./components/_shared/mainMenu/mainMenu";
 import Footer from "./components/_shared/footer/footer";
 import { BreakpointsProvider } from "react-with-breakpoints";
 import routerData from "./components/_shared/utilities/getRouterData";
-import ReactGA from "react-ga";
 import NotFound from "./components/notFound/notFound";
-ReactGA.initialize("G-G57HD6TQE7");
+import GA4React from "ga-4-react";
+const ga4react = new GA4React("G-G57HD6TQE7");
+ga4react.initialize();
 
 const breakpoints = {
   small: 468,
@@ -18,10 +19,6 @@ const breakpoints = {
 };
 
 const App = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  });
-
   return (
     <Router>
       <Route
