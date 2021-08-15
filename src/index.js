@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./global.css";
@@ -9,7 +9,6 @@ import routerData from "./components/_shared/utilities/getRouterData";
 import ReactGA from "react-ga";
 import NotFound from "./components/notFound/notFound";
 ReactGA.initialize("G-G57HD6TQE7");
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 const breakpoints = {
   small: 468,
@@ -19,6 +18,10 @@ const breakpoints = {
 };
 
 const App = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
+
   return (
     <Router>
       <Route

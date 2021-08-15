@@ -8,7 +8,9 @@ const NotFound = (props) => {
     <div className={`${s.root}`}>
       <Helmet>
         <title>{`404 - Ducov`}</title>
+        <meta name="keywords" description="error" />
       </Helmet>
+
       <Hero
         title="Page not found"
         description="Sorry, this page isn't available. You can go to <a href='/'>Home Page</a>, 
