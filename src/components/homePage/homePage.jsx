@@ -25,8 +25,9 @@ const HomePage = () => {
     <Highlight
       prdX1={item.preview_deskX1}
       prdX2={item.preview_deskX2}
+      prmX1={item.preview_mobileX1}
+      prmX2={item.preview_mobileX2}
       prsvg={item.preview_svg_deskX2}
-      prBgPos={item.preview_bgposition}
       tags={item.tag}
       title={item.title}
       key={item.id}
