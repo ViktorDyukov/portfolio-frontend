@@ -103,7 +103,7 @@ const Highlight = React.forwardRef((props, ref) => {
             className={s.upper}
             ref={upper_mobile}
             style={{
-              backgroundImage: `url('${APIUrl}${props.prmX2}')`,
+              backgroundImage: `url('${APIUrl}${props.prmX1}')`,
             }}
           ></div>
           <div className={s.lower}>
