@@ -3,7 +3,7 @@ const mainMenuData = () => {
     { link: "/", text: "Highlights" },
     { link: "/casestudies", text: "Case Studies" },
     { link: "/page/augmented-reality", text: "Augmented Reality" },
-    { link: "/page/mentoring", text: "Mentoring" },
+    { link: "/page/deliverables", text: "Deliverables" },
     { link: "/about", text: "About me" },
   ];
   return menuItems;
