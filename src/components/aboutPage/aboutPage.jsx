@@ -36,7 +36,7 @@ const AboutPage = () => {
             <SocButton
               text="LinkedIn"
               icon={`${process.env.PUBLIC_URL}/icons/soc/halo.png`}
-              link="https://www.linkedin.com/in/viktordyukov/"
+              link="https://www.linkedin.com/in/victorduco/"
             />
             <SocButton
               text="Instagram"
