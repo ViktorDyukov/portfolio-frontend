@@ -20,7 +20,7 @@ const AboutPage = () => {
         </div>
         <div class={s.item_text}>
           <div>
-            <h1>Here's my story. Designer, father, mother</h1>
+            <h1>UX Designer with the Passion for Technology</h1>
           </div>
           <div>
             <p>
@@ -60,15 +60,15 @@ const AboutPage = () => {
       <div className={`all_pages_container ${s.content}`}>
         <InfoItem
           title="Experience"
-          body="During the past 8+ years of working as a designer in diverse industries including FinTech, MedTech, SaaS, and Internal communication, I created UX for customers and users of companies from small startups to S&P 500 corporations. "
+          body="During the past 8+ years of working as a designer in diverse industries including FinTech, MedTech, SaaS, and Internal communication, I created UX for customers and users of companies from small startups to S&P 500 corporations."
         />
         <InfoItem
           title="Values"
-          body="I believe that the work I do should have a positive impact on people. There are more and more advanced technologies in the world, and my role as a designer is to create the bridge between people and this new world of innovation. "
+          body="It's important for me that the work I do should have a positive impact on people and the world. There are more and more advanced technologies around us, and my role as a designer is to build the bridge between people and this new world of innovation."
         />
         <InfoItem
           title="Hobbies"
-          body="I like coding. This website is the product of this hobby — I created it with Python (Django Rest API) and React. Now I’m working on an AR project, a prototype of the app for Vuzix Smartglasses so I’m learning to create apps for Android. And yes, I have a dream to find more hobbies that aren’t behind the keyboard. "
+          body="I like coding. This website is the product of that hobby — I created it with Python (Django Rest API) and React. Now, I’m working on my personal AR project, a prototype of the app for Vuzix Smartglasses so I’m learning to create apps for Android. And yes, I do have a dream to find more hobbies that aren’t behind the keyboard."
         />
       </div>
 
