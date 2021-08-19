@@ -9,7 +9,7 @@ const Footer = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="www.linkedin.com/in/victorduco/"
+          href="https://www.linkedin.com/in/victorduco/"
         >
           LinkedIn
         </a>
