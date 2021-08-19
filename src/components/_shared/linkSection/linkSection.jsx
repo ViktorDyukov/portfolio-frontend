@@ -8,9 +8,9 @@ const LinkSection = () => {
       <div className={s.item}>
         <h3>All Studies</h3>
         <p>
-          I believe that flexibility is one of the main skills for a UX
-          designer. Check out my experience in working in different set-ups and
-          on different types of design tasks.
+          I believe flexibility is one of the main skills for a UX designer.
+          Check out my experience in working in various setups and on different
+          types of tasks.
         </p>
         <MainButton link="/casestudies" text="Show all" width="180px" />
       </div>
