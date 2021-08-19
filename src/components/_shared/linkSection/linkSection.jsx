@@ -9,28 +9,28 @@ const LinkSection = () => {
         <h3>All Studies</h3>
         <p>
           I believe that flexibility is one of the main skills for a UX
-          designer. Check my experience in working in different set-ups and on
-          different types of designs tasks.
+          designer. Check out my experience in working in different set-ups and
+          on different types of design tasks.
         </p>
         <MainButton link="/casestudies" text="Show all" width="180px" />
       </div>
       <div className={s.item}>
         <h3>About me</h3>
         <p>
-          Stuff that is not related to work. Here you can find more about my
-          values, life goals, and interests that give me the motivation to do
-          what I do every day.
+          Not related to work. Here you can find more about my values, life
+          goals, and interests that give me the motivation to do what I do every
+          day.
         </p>
         <MainButton link="/about" text="Open page" width="180px" />
       </div>
       <div className={s.item}>
-        <h3>Mentoring</h3>
+        <h3>Deliverables</h3>
         <p>
-          This world is built on mutual help to each other. I like to help
-          beginner designers. And this helps me to rethink some foundation
-          bricks of my knowledge.
+          Here you can find some examples of deliverables I’ve made to represent
+          findings, improve my work visibility, and be on the same page with the
+          team.
         </p>
-        <MainButton link="/page/mentoring" text="Learn more" width="180px" />
+        <MainButton link="/page/deliverables" text="Learn more" width="180px" />
       </div>
     </div>
   );
