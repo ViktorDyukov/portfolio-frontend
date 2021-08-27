@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import s from "./highlight.module.css";
 import { Link, NavLink } from "react-router-dom";
 import { HideAt, ShowAt } from "react-with-breakpoints";
@@ -15,7 +15,7 @@ const Highlight = React.forwardRef((props, ref) => {
   const upper_mobile = useRef(null);
   const all_markers = false;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     console.log(root_desktop.current);
     let tl = gsap.timeline({
       scrollTrigger: {
@@ -51,7 +51,7 @@ const Highlight = React.forwardRef((props, ref) => {
     );
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let tlm = gsap.timeline({
       scrollTrigger: {
         trigger: upper_mobile.current,
