@@ -40,7 +40,7 @@ const App = () => {
       }
     }
   } else {
-    Cookies.set("instance", subdomain, { domain: ".localvictor.com" });
+    Cookies.set("instance", subdomain, { domain: cookiedomain });
   }
 
   return (
