@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet";
 import s from "./aboutPage.module.css";
 import SocButton from "./socButton";
 import InfoItem from "../_shared/infoItem/infoItem";
+import { APIUrl } from "../_shared/utilities/api";
+import getSubdomain from "../_shared/utilities/getSubdomain";
 
 const AboutPage = () => {
   return (
@@ -46,7 +48,7 @@ const AboutPage = () => {
             <SocButton
               text="Download CV"
               icon={`${process.env.PUBLIC_URL}/icons/soc/smirking.png`}
-              link="files/viktordyukov-cv.pdf"
+              link={`${APIUrl}/api/cv/${getSubdomain()}`}
             />
             <SocButton
               text="Send email"
