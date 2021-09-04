@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import s from "./separatorImg.module.css";
 import ImgSet from "../_shared/imgSet/imgSet";
 import { gsap } from "gsap";
@@ -9,7 +9,7 @@ const SeparatorImg = ({ imgX1, imgX2 }) => {
   const separator = useRef(null);
   const all_markers = false;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: separator.current,
