@@ -1,0 +1,102 @@
+.modalTemp {
+  padding: 10% 12%;
+}
+
+.modalHeader {
+  opacity: 0;
+  transition: 2s;
+  transition-delay: 0s;
+}
+
+.modalItem1 {
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.modalItem2 {
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 1s;
+}
+
+.modalItem3 {
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 1.5s;
+}
+
+.modalItem4 {
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 2s;
+}
+
+.modalTemp h1 {
+  font-size: 56px;
+}
+
+.modalTemp h2 {
+  margin-top: 40px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 32px;
+  color: #ddd;
+}
+
+.topBar {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.startButton {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.42px;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  transition: all 0.1s;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 2.5s;
+}
+
+.startButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.startButton > div {
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+.startButton > img {
+  padding-top: 2px;
+}
+
+.hiddenButton {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0;
+  background: none;
+  border: 0;
+  color: white;
+  transition: 1s;
+  font-size: 16px;
+}
+
+.hiddenButton:hover {
+  opacity: 1;
+  transition-delay: 3s;
+}

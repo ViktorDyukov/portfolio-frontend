@@ -7,6 +7,22 @@ import InfoItem from "../_shared/infoItem/infoItem";
 import Tags from "../_shared/tags/tags.jsx";
 import SeparatorImg from "./separatorImg.jsx";
 import NotFound from "../notFound/notFound.jsx";
+import Modal from "react-modal";
+import ReactGoogleSlides from "react-google-slides";
+import StudyPagePresentation from "./studyPagePresentation.jsx";
+
+const customStyles = {
+  content: {
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    background: "#111111",
+    transform: "translate(0%, 0%)",
+    textAlign: "left",
+    border: "0",
+  },
+};
 
 const StudyPage = () => {
   let id = useParams().id;
@@ -21,6 +37,7 @@ const StudyPage = () => {
     return <div></div>;
   }
   // end - getting data
+
 
   return (
     <div>
@@ -42,6 +59,7 @@ const StudyPage = () => {
         ))}
         <InfoItem title="Designs" gallery="true" body={data.caseImage} />
       </div>
+      <StudyPagePresentation link={data.slidesLink} />
     </div>
   );
 };
