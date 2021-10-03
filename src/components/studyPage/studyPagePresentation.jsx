@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import s from "./studyPagePresentation.module.css";
 import Modal from "react-modal";
 import ReactGoogleSlides from "react-google-slides";
+import { useHotkeys } from "react-hotkeys-hook";
 
 const customStyles = {
   content: {
@@ -25,6 +26,7 @@ const StudyPagePresentation = (props) => {
     modalStartButton;
   const [modal1IsOpen, setIsOpen1] = React.useState(false);
   const [modal2IsOpen, setIsOpen2] = React.useState(false);
+  useHotkeys("ctrl+p", () => openModal1());
 
   if (props.link == "") return "";
 
