@@ -9,7 +9,7 @@ const customStyles = {
     left: "0",
     width: "100%",
     height: "100%",
-    background: "#111111",
+    background: "#000",
     transform: "translate(0%, 0%)",
     textAlign: "left",
     border: "0",
@@ -56,7 +56,7 @@ const StudyPagePresentation = (props) => {
   return (
     <div>
       <button onClick={openModal1} className={s.hiddenButton}>
-        Start presentation mode
+        Open presentation
       </button>
       <Modal
         isOpen={modal1IsOpen}
@@ -84,7 +84,7 @@ const StudyPagePresentation = (props) => {
             className={s.modalHeader}
             ref={(_modalHeader) => (modalHeader = _modalHeader)}
           >
-            Presentation Mode
+            Overview
           </h1>
           <h2
             className={s.modalItem1}
@@ -123,6 +123,7 @@ const StudyPagePresentation = (props) => {
           height="100%"
           slidesLink={props.link}
           position={1}
+          containerStyle={{ backgroundColor: "black", border: "none" }}
         />
       </Modal>
     </div>
